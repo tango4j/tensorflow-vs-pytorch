@@ -2,47 +2,53 @@
 
 This repository aims for comparative analysis of TensorFlow vs PyTorch, for those who want to learn TensorFlow while already familiar with PyTorch or vice versa.
 
-There are few distinct differences between Tensorflow and Pytorch when it comes to data compuation.
+- There are few distinct differences between Tensorflow and Pytorch when it comes to data compuation.
 
-TensorFlow	PyTorch
-Framework	Define-and-run	Define-by-run
-Graph	Static	Dynamic
-How "Graph" is defined in each framework?
+|               | TensorFlow      | PyTorch        |
+|---------------|-----------------|----------------|
+| Framework     | Define-and-run  | Define-by-run  |
+| Graph         | Static | Dynamic|
 
-TensorFlow:
+**How "Graph" is defined in each framework?**
 
-Static graph.
+**TensorFlow:** 
 
-Once define a computational graph and excute the same graph repeatedly.
+- Static graph.
 
-Pros:
+- Once define a computational graph and excute the same graph repeatedly.
 
-(1) Optimizes the graph upfront and makes better distributed computation.
+- Pros: 
 
-(2) Repeated computation does not cause additional computational cost.
+    (1) Optimizes the graph upfront and makes better distributed computation.
+    
+    (2) Repeated computation does not cause additional computational cost.
 
-Cons:
 
-(1) Difficult to perform different computation for each data point.
+- Cons: 
 
-(2) The structure becomes more complicated and harder to debug than dynamic graph.
+    (1) Difficult to perform different computation for each data point.
+    
+    (2) The structure becomes more complicated and harder to debug than dynamic graph. 
 
-PyTorch:
+**PyTorch:** 
 
-Dynamic graph.
+- Dynamic graph.
 
-Does not define a graph in advance. Every forward pass makes a new computational graph.
+- Does not define a graph in advance. Every forward pass makes a new computational graph.
 
-Pros:
+- Pros: 
 
-(1) Debugging is easier than static graph.
+    (1) Debugging is easier than static graph.
+    
+    (2) Keep the whole structure concise and intuitive. 
+    
+    (3) For each data point and time different computation can be performed.
+    
+    
+- Cons: 
 
-(2) Keep the whole structure concise and intuitive.
-
-(3) For each data point and time different computation can be performed.
-
-Cons:
-
-(1) Repetitive computation can lead to slower computation speed.
-
-(2) Difficult to distribute the work load in the beginning of training.
+    (1) Repetitive computation can lead to slower computation speed. 
+    
+    (2) Difficult to distribute the work load in the beginning of training.
+    
+   
