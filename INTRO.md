@@ -2,6 +2,8 @@
 
 This repository aims for comparative analysis of TensorFlow vs PyTorch, for those who want to learn TensorFlow while already familiar with PyTorch or vice versa.
 
+The whole content was written in Ipython Notebook then converted into MarkDown. Ipython Notebooks in main directory cotains the same content.
+
 ### TABLE OF CONTENTS
 
 [**01. Tensor**](https://github.com/tango4j/tensorflow-vs-pytorch#01-tensor)  
