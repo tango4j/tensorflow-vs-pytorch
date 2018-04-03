@@ -1,6 +1,8 @@
 # tensorflow-vs-pytorch
 
-# TABLE OF CONTENTS
+This repository aims for comparative analysis of TensorFlow vs PyTorch, for those who want to learn TensorFlow while already familiar with PyTorch or vice versa.
+
+### TABLE OF CONTENTS
 
 [**01. Tensor**](https://github.com/tango4j/tensorflow-vs-pytorch#01-tensor)  
 
@@ -17,8 +19,6 @@
 
 [1. Dynamic Graph and Static Graph](https://github.com/tango4j/tensorflow-vs-pytorch#1-dynamic-graph-and-static-graph)
 
-
-This repository aims for comparative analysis of TensorFlow vs PyTorch, for those who want to learn TensorFlow while already familiar with PyTorch or vice versa.
 
 - There are a few distinct differences between Tensorflow and Pytorch when it comes to data compuation.
 
