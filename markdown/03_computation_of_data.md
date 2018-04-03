@@ -66,7 +66,7 @@ point and time different computation can be performed.
     (2)
 Difficult to distribute the work load in the beginning of training.
 
-# 1. Dynamic and Static Graph
+# 1. Dynamic Graph and Static Graph
 
 ## **[TensorFlow]** Graph and session
 
