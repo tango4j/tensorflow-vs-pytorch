@@ -1,5 +1,7 @@
 # tensorflow-vs-pytorch
 
+## A Guide for the one who wants to learn both TensorFlow and PyTorch
+
 This repository aims for comparative analysis of TensorFlow vs PyTorch, for those who want to learn TensorFlow while already familiar with PyTorch or vice versa.
 
 [**01. Tensor**](https://github.com/tango4j/tensorflow-vs-pytorch/blob/master/01_tensor.ipynb)  
