@@ -17,7 +17,7 @@ This repository aims for comparative analysis of TensorFlow vs PyTorch, for thos
 
 [1. Dynamic and Static Graph](https://render.githubusercontent.com/view/ipynb?commit=a8d789abb0469cacae196b61a35da083059ad6de&enc_url=68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f74616e676f346a2f74656e736f72666c6f772d76732d7079746f7263682f613864373839616262303436396361636165313936623631613335646130383330353961643664652f30335f636f6d7075746174696f6e5f6f665f646174612e6970796e62&nwo=tango4j%2Ftensorflow-vs-pytorch&path=03_computation_of_data.ipynb&repository_id=127955188&repository_type=Repository#1.-Dynamic-and-Static-Graph)
 
-- There are few distinct differences between Tensorflow and Pytorch when it comes to data compuation.
+- There are a few distinct differences between Tensorflow and Pytorch when it comes to data compuation.
 
 
 |               | TensorFlow      | PyTorch        |
