@@ -11,11 +11,11 @@ This repository aims for comparative analysis of TensorFlow vs PyTorch, for thos
 [3. Indentifying The Dimension](https://github.com/tango4j/tensorflow-vs-pytorch/blob/master/markdown/01_tensor.md#3-indentifying-the-dimension)  
 [4. Shaping the Tensor Variables](https://github.com/tango4j/tensorflow-vs-pytorch/blob/master/markdown/01_tensor.md#4-shaping-the-tensor-variables)  
 
-[**02. Variable**](https://github.com/tango4j/tensorflow-vs-pytorch/blob/master/02_variable.ipynb)
+[**02. Variable**](https://github.com/tango4j/tensorflow-vs-pytorch/blob/master/markdown/02_variable.md#02-variables-)
 
 [1. Creating a Variable](https://github.com/tango4j/tensorflow-vs-pytorch/blob/master/markdown/02_variable.md#1-creating-a-variable)
 
-[**03. Computation of data**](https://github.com/tango4j/tensorflow-vs-pytorch/blob/master/03_computation_of_data.ipynb)
+[**03. Computation of data**](https://github.com/tango4j/tensorflow-vs-pytorch/blob/master/markdown/03_computation_of_data.md#03-computaion-of-data)
 
 [1. Dynamic and Static Graph](https://github.com/tango4j/tensorflow-vs-pytorch/blob/master/markdown/03_computation_of_data.md#1-dynamic-and-static-graph)
 
