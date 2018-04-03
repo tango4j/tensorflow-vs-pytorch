@@ -44,6 +44,7 @@ Tensor](https://www.tensorflow.org/programmers_guide/tensors) explains this in
 very confusing way. Official guide from TensorFlow's website says these three
 tensors are the most commonly used special type tensors:  
 
+
 >  **tf.Variable**
 >  **tf.constant**  
 >  **tf.placeholder**   
@@ -66,12 +67,13 @@ print('Type of tf.SparseTensor is: ', type(tf_spts))
 
 Threrefore, the following description would be way less confusing.  
 
--
+
+*
 tf.Variable createss Variable.  
-- tf.constant createss Tensor.  
--
+*  tf.constant createss Tensor.  
+*
 tf.placeholder creates Tensor.  
-- tf.SparseTensor creates SparseTensor (which
+*  tf.SparseTensor creates SparseTensor (which
 is similar to Tensor).
 
 There are more special type tensors other than above three.
@@ -123,7 +125,7 @@ tf_tensor_ones = tf.ones([3, 4, 4], dtype=tf.float64)
 print('Directly declare a Tensor: ', tf_tensor_ones)
 ```
 
-### Difference between special tensors/Variable (TensorFlow)  
+### Difference between special tensors and tf.Variable (TensorFlow)  
 
 **(1)
 tf.Variable **  
