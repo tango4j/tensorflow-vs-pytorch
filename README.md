@@ -3,11 +3,11 @@
 This repository aims for comparative analysis of TensorFlow vs PyTorch, for those who want to learn TensorFlow while already familiar with PyTorch or vice versa.
 
 - There are few distinct differences between Tensorflow and Pytorch when it comes to data compuation.
-
 |               | TensorFlow      | PyTorch        |
 |---------------|-----------------|----------------|
 | Framework     | Define-and-run  | Define-by-run  |
 | Graph         | Static | Dynamic|
+| Debug         | Non-native debugger (tfdbg) |pdb(ipdb) Python debugger|
 
 **How "Graph" is defined in each framework?**
 
