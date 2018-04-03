@@ -4,10 +4,10 @@ This repository aims for comparative analysis of TensorFlow vs PyTorch, for thos
 
 [**01. Tensor**](https://github.com/tango4j/tensorflow-vs-pytorch/blob/master/01_tensor.ipynb)  
 
-[1.The-concept-of-tensor](http://localhost:8888/notebooks/Dropbox/personal_prj/tensorflow-vs-pytorch/01_tensor.ipynb#1.-The-concept-of-tensor)  
-[2.-Tensor-Numpy-Conversion](http://localhost:8888/notebooks/Dropbox/personal_prj/tensorflow-vs-pytorch/01_tensor.ipynb#2.-Tensor-Numpy-Conversion)  
-[3.-Indentifying-The-Dimension](http://localhost:8888/notebooks/Dropbox/personal_prj/tensorflow-vs-pytorch/01_tensor.ipynb#3.-Indentifying-The-Dimension)  
-[4.-Shaping-the-Tensor-Variables](http://localhost:8888/notebooks/Dropbox/personal_prj/tensorflow-vs-pytorch/01_tensor.ipynb#4.-Shaping-the-Tensor-Variables)  
+[1.The-concept-of-tensor](https://render.githubusercontent.com/view/ipynb?commit=59e8df5d44e2a7578e78024f1313985ac81d4d30&enc_url=68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f74616e676f346a2f74656e736f72666c6f772d76732d7079746f7263682f353965386466356434346532613735373865373830323466313331333938356163383164346433302f30315f74656e736f722e6970796e62&nwo=tango4j%2Ftensorflow-vs-pytorch&path=01_tensor.ipynb&repository_id=127955188&repository_type=Repository#1.-The-Concept-of-Tensor)  
+[2.-Tensor-Numpy-Conversion](https://render.githubusercontent.com/view/ipynb?commit=59e8df5d44e2a7578e78024f1313985ac81d4d30&enc_url=68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f74616e676f346a2f74656e736f72666c6f772d76732d7079746f7263682f353965386466356434346532613735373865373830323466313331333938356163383164346433302f30315f74656e736f722e6970796e62&nwo=tango4j%2Ftensorflow-vs-pytorch&path=01_tensor.ipynb&repository_id=127955188&repository_type=Repository#2.-Tensor-Numpy-Conversion)  
+[3.-Indentifying-The-Dimension](https://render.githubusercontent.com/view/ipynb?commit=59e8df5d44e2a7578e78024f1313985ac81d4d30&enc_url=68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f74616e676f346a2f74656e736f72666c6f772d76732d7079746f7263682f353965386466356434346532613735373865373830323466313331333938356163383164346433302f30315f74656e736f722e6970796e62&nwo=tango4j%2Ftensorflow-vs-pytorch&path=01_tensor.ipynb&repository_id=127955188&repository_type=Repository#3.-Indentifying-The-Dimension)  
+[4.-Shaping-the-Tensor-Variables](https://render.githubusercontent.com/view/ipynb?commit=59e8df5d44e2a7578e78024f1313985ac81d4d30&enc_url=68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f74616e676f346a2f74656e736f72666c6f772d76732d7079746f7263682f353965386466356434346532613735373865373830323466313331333938356163383164346433302f30315f74656e736f722e6970796e62&nwo=tango4j%2Ftensorflow-vs-pytorch&path=01_tensor.ipynb&repository_id=127955188&repository_type=Repository#4.-Shaping-the-Tensor-Variables)  
 
 [02. Variable](https://github.com/tango4j/tensorflow-vs-pytorch/blob/master/02_variable.ipynb)
 
