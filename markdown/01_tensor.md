@@ -8,16 +8,17 @@ term "Variable" in each framework is used in different way.
 **TensorFlow**
 
 IF
-you want to declare mutable variable (weight and bias) : use **tf.Variable**
-IF you want to declare immutable variable (a constant that will never change) :
-use **tf.constant**
+you want to declare mutable variable (weight and bias): use **tf.Variable**  
+IF
+you want to declare immutable variable (a constant that will never change): use
+**tf.constant**
 
 **PyTorch**
 
 IF you want to calculate matrix with torch
-framework : use **torch.FloatTensor**  
+framework: use **torch.FloatTensor**  
 IF you want to use autograd and get
-gradient value : use **torch.autograd.Variable**
+gradient value: use **torch.autograd.Variable**
 
 Let's get into details.
 
@@ -67,7 +68,8 @@ print('Type of tf.placeholder is: ', type(tf_ph))
 print('Type of tf.SparseTensor is: ', type(tf_spts))
 ```
 
-Threrefore, the following description would be way less confusing.
+Threrefore, the following description would be way less confusing.  
+
 
 -
 tf.Variable createss Variable.
@@ -115,12 +117,11 @@ print('The shape of tf_var1:', tf_var1.shape)
 
 If we want to directly declare tensorflow Tensor, we have to specify 
 
-* shape
-*
-datatype
+*  shape
+*  datatype
 
-to declare a special type tensors. (which is tf.Variable, tf.constant,
-tf.placeholder... etc)
+to declare a special type tensors. (which is tf.Variable,
+tf.constant, tf.placeholder... etc)
 
 ```python
 tf_tensor_ones = tf.ones([3, 4, 4], dtype=tf.float64)
