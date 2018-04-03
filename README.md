@@ -3,6 +3,11 @@
 This repository aims for comparative analysis of TensorFlow vs PyTorch, for those who want to learn TensorFlow while already familiar with PyTorch or vice versa.
 
 [01. Tensor](https://github.com/tango4j/tensorflow-vs-pytorch/blob/master/01_tensor.ipynb)
+[1.-The-concept-of-tensor](http://localhost:8888/notebooks/Dropbox/personal_prj/tensorflow-vs-pytorch/01_tensor.ipynb#1.-The-concept-of-tensor)
+[2.-Tensor-Numpy-Conversion](http://localhost:8888/notebooks/Dropbox/personal_prj/tensorflow-vs-pytorch/01_tensor.ipynb#2.-Tensor-Numpy-Conversion)
+[3.-Indentifying-The-Dimension](http://localhost:8888/notebooks/Dropbox/personal_prj/tensorflow-vs-pytorch/01_tensor.ipynb#3.-Indentifying-The-Dimension)
+[4.-Shaping-the-Tensor-Variables](http://localhost:8888/notebooks/Dropbox/personal_prj/tensorflow-vs-pytorch/01_tensor.ipynb#4.-Shaping-the-Tensor-Variables)
+[](
 
 [02. Variable](https://github.com/tango4j/tensorflow-vs-pytorch/blob/master/02_variable.ipynb)
 
