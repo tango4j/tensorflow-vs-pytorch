@@ -116,16 +116,12 @@ Unfortunately, TensorFlow's official website [Tensorflow
 Programmer's Guide -
 Tensor](https://www.tensorflow.org/programmers_guide/tensors) explains this in
 very confusing way. Official guide from TensorFlow's website says these three
-tensors are the most commonly used special type tensors:
+tensors are the most commonly used special type tensors:  
 
-> **tf.Variable**
-
->
-**tf.constant**
-
-> **tf.placeholder** 
-
-> **tf.SparseTensor**
+>  **tf.Variable**
+>  **tf.constant**  
+>  **tf.placeholder**   
+>  **tf.SparseTensor**
 
 However, tf.Variable is not internally categorized as a "Tensor" according to
 the class structure that we can see with "type" command in python.
@@ -144,14 +140,13 @@ print('Type of tf.SparseTensor is: ', type(tf_spts))
 
 Threrefore, the following description would be way less confusing.  
 
-
 -
-tf.Variable createss Variable.
-- tf.constant createss Tensor.
-- tf.placeholder
-creates Tensor.
-- tf.SparseTensor creates SparseTensor (which is similar to
-Tensor).
+tf.Variable createss Variable.  
+- tf.constant createss Tensor.  
+-
+tf.placeholder creates Tensor.  
+- tf.SparseTensor creates SparseTensor (which
+is similar to Tensor).
 
 There are more special type tensors other than above three.
 However, there are
@@ -202,28 +197,31 @@ tf_tensor_ones = tf.ones([3, 4, 4], dtype=tf.float64)
 print('Directly declare a Tensor: ', tf_tensor_ones)
 ```
 
-### Difference between special tensors/Variable (TensorFlow)
-**(1) tf.Variable
-**
-- tf.Variable is **NOT** actually tensor, but rather it should be classified
-as **Variable** to avoid confusion.
-- tf.Variable is the only type that can be
-modified.
-- tf.Variable is designed for weights and bias(≠ tf.placeholder). Not
-for feeding data.
-- tf.Variable is stored separately, and may live on a
-parameter server, **not in the graph**. 
-- tf.Variable should always be
-initialized before run.
-- Usually declared by [initial value], [dtype], [name].
-(There are more arguments...)
+### Difference between special tensors/Variable (TensorFlow)  
+
+**(1)
+tf.Variable **  
+
+- tf.Variable is **NOT** actually tensor, but rather it should
+be classified as **Variable** to avoid confusion.
+- tf.Variable is the only type
+that can be modified.
+- tf.Variable is designed for weights and bias(≠
+tf.placeholder). Not for feeding data.
+- tf.Variable is stored separately, and
+may live on a parameter server, **not in the graph**. 
+- tf.Variable should
+always be initialized before run.
+- Usually declared by [initial value],
+[dtype], [name]. (There are more arguments...)
 
 ```python
 mymat = tf.Variable([[7],[11]], tf.int16, name='cat') 
 squarish_squares = tf.Variable([ [4, 9], [16, 25] ], tf.int32)
 ```
 
-**(2) tf.constant**
+**(2) tf.constant**  
+
 - tf.constant holds values that cannot be changed.
 -
 tf.constant is also designed for weights and bias, but fixed value. 
@@ -237,11 +235,12 @@ tf.Variable)
 const_tensor = tf.constant([[7],[11]], tf.int16, name='cat') 
 ```
 
-**(3) tf.placeholder**
-- tf.placeholder is designed to store values to be fed,
-such as images.
-- tf.placeholder will produce an error if evaluated. Its value
-must be fed using the feed_dict optional argument to Session.run(),
+**(3) tf.placeholder**  
+
+- tf.placeholder is designed to store values to be
+fed, such as images.
+- tf.placeholder will produce an error if evaluated. Its
+value must be fed using the feed_dict optional argument to Session.run(),
 Tensor.eval(), or Operation.run().
 - tf.placeholder is usually declared with
 [dtype], [data shape]
