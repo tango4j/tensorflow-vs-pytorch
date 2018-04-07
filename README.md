@@ -142,18 +142,18 @@ print('Type of tf.SparseTensor is: ', type(tf_spts))
 
 Threrefore, the following description would be way less confusing.  
 
-* tf.Variable createss **Variable**.   
-* tf.constant createss **Tensor**.
+* tf.Variable creates **Variable**.   
+* tf.constant creates **Tensor**.
 * tf.placeholder creates **Tensor**.
 * tf.SparseTensor creates **SparseTensor** (which is similar to Tensor).
 
-**(2) Special type Tensors:**
+**(2) Special type Tensors:**  
 There are more special type tensors other than above three. For example, regular type of tensors such as:
 
 > **tf.zeros**   
 > **tf.ones**  
 
-**(3) Convention for Tensor dimension**
+**(3) Convention for Tensor dimension**  
 The following dimension is usually used for batch image source. Dimension index: 
 
 > Batch x height x width x color-channel
@@ -173,15 +173,18 @@ regular ones.
 tf_var0 = tf.Variable(tf.zeros((2,2)))
 print('The shape of tf_var0:', tf_var0.shape)
 ```
-**(4) Numpy to tf.Variable**
+In this case, type is: *tensorflow.python.ops.variables.Variable* 
+**(4) Numpy to tf.Variable**   
 Or, you can directly convert numpy into tf.Varialbe (which is tf.Tensor)
 
 ```python
 tf_var1 = tf.Variable(np.zeros((2,2)))
 print('The shape of tf_var1:', tf_var1.shape)
 ```
+Also in this case, just as in (3), data type is: *tensorflow.python.ops.variables.Variable*. 
 
-**(5) Direct declaration**
+**(5) Direct declaration**   
+
 If we want to directly declare tensorflow Tensor, we have to specify 
 
 *  shape
@@ -193,6 +196,8 @@ to declare a special type tensors. (which is tf.Variable, tf.constant, tf.placeh
 tf_tensor_ones = tf.ones([3, 4, 4], dtype=tf.float64)
 print('Directly declare a Tensor: ', tf_tensor_ones)
 ```
+Since ones and zeros are Tensors, in this case, data type is: *tensorflow.python.framework.ops.Tensor*.
+
 --------- 
 Okay. Now that we know what are the most commonly used TensorFlow Variables.  
 
