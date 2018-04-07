@@ -89,19 +89,17 @@ If you want to declare immutable variable (a constant that will never change): u
 
 **PyTorch**
 
-IF you want to calculate matrix with torch
-framework: use **torch.FloatTensor**  
-IF you want to use autograd and get
-gradient value: use **torch.autograd.Variable**
+If you want to calculate matrix with torch framework: use **torch.FloatTensor**  
+If you want to use autograd and get gradient value: use **torch.autograd.Variable**
 
 Let's get into details.
 
 # 1. The Concept of Tensor
 
-
 ## **[TensorFlow]** Tensors and special type of tensors
 
 ### Basics for TensorFlow Tensor.
+
 ```python
 import tensorflow as tf
 import numpy as np
@@ -275,6 +273,7 @@ Then, we feed the python list.
 > torch.cuda.LongTensor   
 
 c.f.) In TensorFlow, this would have been: 
+
 ```python
 x = tf.constant([[1, 2, 3]], dtype=tf.float32, name="B")
 ```
@@ -286,6 +285,7 @@ cputensor = torch.FloatTensor([[1,2], [3,4]])
 gputensor = torch.cuda.FloatTensor([[1, 2], [3, 4]]) 
 print('CPU tensor:', cputensor)
 print('GPU tensor:', gputensor)
+```
 
 **(2) PyTorch's dynamic graph feature**   
 
