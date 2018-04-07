@@ -145,6 +145,7 @@ Threrefore, the following description would be way less confusing.
 * tf.SparseTensor creates **SparseTensor** (which is similar to Tensor).
 
 **(2) Special type Tensors:**  
+
 There are more special type tensors other than above three. For example, regular type of tensors such as:
 
 > **tf.zeros**   
@@ -153,6 +154,7 @@ There are more special type tensors other than above three. For example, regular
 These are TensorFlow **Tensors**.
 
 **(3) Convention for Tensor dimension**  
+
 The following dimension is usually used for batch image source. Dimension index: 
 
 > Batch x height x width x color-channel
@@ -358,9 +360,7 @@ print('y, z contains :', y, '\n', z)
 z.backward()
 print('After backward() x.data:', x.data)
 print('After backward() x.grad:', x.grad)
-```
 
-```python
 print('x.grad_fn:', x.grad_fn)
 print('y.grad_fn:', y.grad_fn)
 print('z.grad_fn:', z.grad_fn)
@@ -447,7 +447,7 @@ cuda() variable, you need to use cpu(). We will cover this later.
 
 ## **[TensorFlow]** .shape or tf.rank() followed by .eval()
 
-### .shape in TensorFlow
+### .shape variable in TensorFlow
 
 Like numpy .shape variable, tensorflow also supports .shape variable.
 
@@ -475,7 +475,8 @@ However, PyTorch does not have the concept of rank_var.eval() type routine for s
 
 ## **[PyTorch]** .shape or .size()
 
-As in the tensorflow example,
+### Automatically Displayed PyTorch Tensor Dimension 
+PyTorch Tensor automatically prints the shape of tensor.
 
 ```python
 numpy_array = np.asarray([[1, 2, 3], [4, 5, 6]])
@@ -483,6 +484,7 @@ torch_for_numpy = torch.from_numpy(numpy_array)
 print('If you print it, it shows the dimension - The value of torch_for numpy: \n', torch_for_numpy)
 
 ```
+### .shape variable in PyTorch 
 
 But sometimes we want to get a numerical output. Thus:
 
@@ -491,9 +493,8 @@ print('The dim of torch_for_numpy: \n', list(torch_for_numpy.size()))
 print('Get the numbers directly as a python list!: \n', torch_for_numpy.size()[0], ' and ', torch_for_numpy.size()[1])
 
 ```
-
-In addition, in PyTorch you could also use the inplace variable ".shape" to view
-the dimension of Tensor, just like in TensorFlow.
+In addition, in PyTorch you could also use the class variable ".shape" to view
+the dimension of Tensor, just like in numpy and TensorFlow.
 
 ```python
 the_size = torch_for_numpy.shape
@@ -504,6 +505,7 @@ print('What is in the shape?:', list(torch_for_numpy.shape))
 
 ## **[TensorFlow]** tf.reshape
 
+### Reshape tf.Tensor with tf.reshape
 Sometimes you need to reshape the tensor (e.g. Convolutional layer to full connected layer).
 
 ```python
@@ -527,6 +529,7 @@ tf_tensor2 = tf.reshape(tensor0, [2, -1])  # Make "tensor1" matrix into 4 by 6 m
 print('The shape of tf_tensor2: %s' %tf_tensor2.shape)
 ```
 
+### Handling the Rest of Dimension with "-1"
 Or you can specitfy multiple dimension and then set it '-1' to handle rest of
 the dimension.
 
@@ -537,6 +540,7 @@ print('The shape of tf_tensor3: %s' %tf_tensor3.shape)
 
 ## **[PyTorch]** .view() function
 
+### Reshape PyTorch Tensor with .view()
 PyTorch provides with .view() function for reshaping the Tensor.
 
 ```python
@@ -550,7 +554,7 @@ The usage of .view() is very analgous to tf.reshape() in TensorFlow.
 torch_tensor1 = torch_tensor0.view(2, -1)
 print('The shape of torch_tensor1:', torch_tensor1.shape)
 ```
-
+### Copy the Dimension of other PyTorch tensor .view_as()
 Also, view_as() function copies the shape of the input Tensor and shape the
 corresponding Tensor.
 
@@ -561,7 +565,8 @@ print('The shape of torch_tensor2:', torch_tensor2.shape)
 
 # 5. Datatype Conversion
 
-# 6. Printing Variables
+# 6. Printing Variables   
+
 # **02 Variables **
 
 In the last session, we learned about the difference between tf.Variables and
