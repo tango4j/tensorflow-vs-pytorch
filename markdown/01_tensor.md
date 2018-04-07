@@ -84,7 +84,7 @@ The following dimension is usually used for batch image source. Dimension index:
 
 > Batch x height x width x color-channel
 
-Ex: 4 -dimensional tensor
+*Example 4* -dimensional tensor
 
 ```python
 my_image = tf.zeros([10, 512, 256, 3])
