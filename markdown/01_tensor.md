@@ -31,13 +31,11 @@ Let's get into details.
 import tensorflow as tf
 import numpy as np
 ```
-**What is TensorFlow "Tensor" ?**  
+**(1) What is TensorFlow "Tensor" ?**  
 The concept of "tensor" in Tensorflow is very confusing for beginners.
 When it says "tf.Tensor", that means "Class Tensor". In addition, there are some special type of tensors.
 
-
-Unfortunately, TensorFlow's official website [Tensorflow
-Programmer's Guide -Tensor](https://www.tensorflow.org/programmers_guide/tensors) explains this in
+Unfortunately, TensorFlow's official website [Tensorflow Programmer's Guide -Tensor](https://www.tensorflow.org/programmers_guide/tensors) explains this in
 very confusing way. 
 
 Official guide from TensorFlow's website says these three
@@ -74,13 +72,13 @@ Threrefore, the following description would be way less confusing.
 * tf.placeholder creates **Tensor**.
 * tf.SparseTensor creates **SparseTensor** (which is similar to Tensor).
 
-
-There are more special type tensors other than above three. However, there are regular type of tensors 
+**(2) Special type Tensors:**
+There are more special type tensors other than above three. For example, regular type of tensors such as:
 
 > **tf.zeros**   
 > **tf.ones**  
 
-The following dimension is usually used for batch image source. Dimension index: 
+c.f.) The following dimension is usually used for batch image source. Dimension index: 
 
 > Batch x height x width x color-channel
 
@@ -99,7 +97,7 @@ regular ones.
 tf_var0 = tf.Variable(tf.zeros((2,2)))
 print('The shape of tf_var0:', tf_var0.shape)
 ```
-
+**(3) Numpy to tf.Variable**
 Or, you can directly convert numpy into tf.Varialbe (which is tf.Tensor)
 
 ```python
@@ -112,13 +110,14 @@ If we want to directly declare tensorflow Tensor, we have to specify
 *  shape
 *  datatype
 
-to declare a special type tensors. (which is tf.Variable,
-tf.constant, tf.placeholder... etc)
+to declare a special type tensors. (which is tf.Variable, tf.constant, tf.placeholder... etc)
 
 ```python
 tf_tensor_ones = tf.ones([3, 4, 4], dtype=tf.float64)
 print('Directly declare a Tensor: ', tf_tensor_ones)
 ```
+
+Then, what are the differences between these variables? Let's find out.
 
 ### Difference between special tensors and tf.Variable (TensorFlow)
 **(1)tf.Variable **  
