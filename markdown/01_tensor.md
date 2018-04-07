@@ -78,7 +78,8 @@ There are more special type tensors other than above three. For example, regular
 > **tf.zeros**   
 > **tf.ones**  
 
-c.f.) The following dimension is usually used for batch image source. Dimension index: 
+**(3) Convention for Tensor dimension**
+The following dimension is usually used for batch image source. Dimension index: 
 
 > Batch x height x width x color-channel
 
@@ -97,7 +98,7 @@ regular ones.
 tf_var0 = tf.Variable(tf.zeros((2,2)))
 print('The shape of tf_var0:', tf_var0.shape)
 ```
-**(3) Numpy to tf.Variable**
+**(4) Numpy to tf.Variable**
 Or, you can directly convert numpy into tf.Varialbe (which is tf.Tensor)
 
 ```python
@@ -105,6 +106,7 @@ tf_var1 = tf.Variable(np.zeros((2,2)))
 print('The shape of tf_var1:', tf_var1.shape)
 ```
 
+**(5) Direct declaration**
 If we want to directly declare tensorflow Tensor, we have to specify 
 
 *  shape
@@ -117,7 +119,13 @@ tf_tensor_ones = tf.ones([3, 4, 4], dtype=tf.float64)
 print('Directly declare a Tensor: ', tf_tensor_ones)
 ```
 
-Then, what are the differences between these variables? Let's find out.
+Okay. Now that we know what are the most commonly used TensorFlow Variables.  
+
+Note that this is very different from PyTorch, since PyTorch does not have concept of placeholder or constant.  
+
+Therefore, if you want to get the hang of Tenforflow you should know what are the differences between these variables, and their use cases.  
+
+Let's find out.
 
 ### Difference between special tensors and tf.Variable (TensorFlow)
 **(1)tf.Variable **  
