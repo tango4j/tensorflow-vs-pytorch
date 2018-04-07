@@ -213,8 +213,7 @@ print('GPU tensor:', gputensor)
 
 **(2) PyTorch's dynamic graph feature**   
 
-Unlike TensorFlow's tf.Variable, PyTorch's Variable functions differently. This is because PyTorch is
-based on "Autograd" which enables Define-by-Run type of computational graph. We will deal with this again later.
+Unlike TensorFlow's tf.Variable, PyTorch's Variable functions differently. This is because PyTorch is based on "Autograd" which enables Define-by-Run type of computational graph. We will deal with this again later.
 
 ```python
 x_np = np.array([1, 2])
