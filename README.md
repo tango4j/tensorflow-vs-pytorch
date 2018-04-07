@@ -98,7 +98,7 @@ Let's get into details.
 
 ## **[TensorFlow]** Tensors and special type of tensors
 
-### Basics for TensorFlow Tensor.
+### Basics for TensorFlow Tensors
 
 ```python
 import tensorflow as tf
@@ -149,6 +149,8 @@ There are more special type tensors other than above three. For example, regular
 
 > **tf.zeros**   
 > **tf.ones**  
+
+These are TensorFlow **Tensors**.
 
 **(3) Convention for Tensor dimension**  
 The following dimension is usually used for batch image source. Dimension index: 
@@ -206,7 +208,7 @@ Therefore, if you want to get the hang of Tenforflow you should know what are th
 
 Let's find out.
 
-### Difference between special tensors and tf.Variable (TensorFlow)  
+### Difference Between Special Tensors and tf.Variable (TensorFlow)  
 **(1) tf.Variable:**   
 
 - tf.Variable is **NOT** actually tensor, but rather it
@@ -272,11 +274,15 @@ Then, we feed the python list.
 > torch.cuda.IntTensor    
 > torch.cuda.LongTensor   
 
-c.f.) In TensorFlow, this would have been: 
 
 ```python
-x = tf.constant([[1, 2, 3]], dtype=tf.float32, name="B")
+x = torch.IntTensor(2, 4).zero_()
+y = torch.FloatTensor([[1, 2, 3], [4, 5, 6]])
+print('PyTorch tensor x:', x)
+print('PyTorch tensor y:', y)
 ```
+
+
 
 If you want to use CPU, you can remove cuda. Ex: torch.FloatTensor
 
@@ -285,6 +291,12 @@ cputensor = torch.FloatTensor([[1,2], [3,4]])
 gputensor = torch.cuda.FloatTensor([[1, 2], [3, 4]]) 
 print('CPU tensor:', cputensor)
 print('GPU tensor:', gputensor)
+```
+c.f.) In TensorFlow, this would be: 
+
+```python
+x = tf.constant([[1, 2, 3]], dtype=tf.float32, name="B")
+y = tf.Variable([[7],[11]], tf.int16, name='cat') 
 ```
 
 **(2) PyTorch's dynamic graph feature**   
@@ -309,7 +321,7 @@ print('Type of torch.Tensor: ', type(cputensor))
 
 **(3) What does torch.autograd.Variable contain?**   
 
-Because of the forementioned reasons, PyTorch's Variable contains three different
+Because of the aforementioned reasons, PyTorch's Variable contains three different
 entities as below
 
 **torch.autograd.Variable:**
@@ -322,7 +334,7 @@ variable.
 it has gone through. (Creator does not exists as a real variable in the torch.autograd.Variable.)
 
 Unlike TensorFlow, PyTorch Variable (not graph) contains the history of the Variable itself
-to enable Autograd feature. When the a variable is declared, .grad and .grad_fn
+to enable Autograd feature. When PyTorch Variable is declared, .grad and .grad_fn
 contain None.
 
 ```python
@@ -333,11 +345,10 @@ print('x.grad:', x.grad_fn)
 
 **(4) Backpropagation with dynamic graph**  
 
-However, if the Variables go through some mathmatical operation and we use
+However, if the Variables go through some mathematical operation and we use
 .backward() function to use Autograd feature.  
-Then we can see what is inside
-the variables .data, .grad and .grad_fn. ".grad_fn" variable contains the
-gradiemt function that has automatically assigned to the operation.
+
+Then we can see what is inside the variables .data, .grad and .grad_fn. ".grad_fn" variable contains the gradient function that has automatically assigned to the operation.
 
 We will discuss about this in detail later. Here, make sure you understand
 torch.autograd.Variable contains the following variables.
