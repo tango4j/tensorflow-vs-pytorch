@@ -114,9 +114,13 @@ When it says "tf.Tensor", that means "Class Tensor". In addition, there are some
 
 Unfortunately, TensorFlow's official website [Tensorflow
 Programmer's Guide -Tensor](https://www.tensorflow.org/programmers_guide/tensors) explains this in
-very confusing way. Official guide from TensorFlow's website says these three
+very confusing way. 
+
+Official guide from TensorFlow's website says these three
 tensors are the most commonly used special type tensors:  
 
+
+**The most frequently used data types in TensorFlow:**  
 > **tf.Variable**
 > **tf.constant**  
 > **tf.placeholder**   
