@@ -107,7 +107,7 @@ Let's get into details.
 import tensorflow as tf
 import numpy as np
 ```
-**What is TensorFlow "Tensor" ? **  
+** What is TensorFlow "Tensor" ? **  
 The concept of "tensor" in Tensorflow is very confusing for beginners.
 When it says "tf.Tensor", that means "Class Tensor". In addition, there are some special type of tensors.
 
@@ -141,13 +141,11 @@ print('Type of tf.SparseTensor is: ', type(tf_spts))
 Threrefore, the following description would be way less confusing.  
 
 
-*
-tf.Variable createss Variable.  
+* tf.Variable createss Variable.  
 * tf.constant createss Tensor.  
-*
-tf.placeholder creates Tensor.  
-* tf.SparseTensor creates SparseTensor (which
-is similar to Tensor).
+* tf.placeholder creates Tensor.  
+* tf.SparseTensor creates SparseTensor (which is similar to Tensor).
+
 
 There are more special type tensors other than above three.
 However, there are
