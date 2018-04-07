@@ -43,8 +43,8 @@ tensors are the most commonly used special type tensors:
 
 
 **The most frequently used data types in TensorFlow:**  
-> **tf.Variable**
-> **tf.constant**  
+> **tf.Variable**  
+> **tf.constant**   
 > **tf.placeholder**   
 > **tf.SparseTensor**
 
@@ -66,8 +66,7 @@ print('Type of tf.SparseTensor is: ', type(tf_spts))
 
 Threrefore, the following description would be way less confusing.  
 
-
-* tf.Variable createss **Variable**.  
+* tf.Variable createss **Variable**.   
 * tf.constant createss **Tensor**.
 * tf.placeholder creates **Tensor**.
 * tf.SparseTensor creates **SparseTensor** (which is similar to Tensor).
