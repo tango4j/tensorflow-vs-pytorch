@@ -31,24 +31,21 @@ Let's get into details.
 import tensorflow as tf
 import numpy as np
 ```
-
+**What is TensorFlow "Tensor" ? **  
 The concept of "tensor" in Tensorflow is very confusing for beginners.
-When it
-says "tf.Tensor", that means "Class Tensor".
-And there are some special type of
-tensors as follows.
+When it says "tf.Tensor", that means "Class Tensor". In addition, there are some special type of tensors.
+
 
 Unfortunately, TensorFlow's official website [Tensorflow
-Programmer's Guide -
-Tensor](https://www.tensorflow.org/programmers_guide/tensors) explains this in
+Programmer's Guide -Tensor](https://www.tensorflow.org/programmers_guide/tensors) explains this in
 very confusing way. Official guide from TensorFlow's website says these three
 tensors are the most commonly used special type tensors:  
-
 
 > **tf.Variable**
 > **tf.constant**  
 > **tf.placeholder**   
 > **tf.SparseTensor**
+
 
 However, tf.Variable is not internally categorized as a "Tensor" according to
 the class structure that we can see with "type" command in python.
