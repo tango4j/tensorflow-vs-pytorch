@@ -76,17 +76,15 @@ The whole content was written in Ipython Notebook then converted into MarkDown. 
 
 # **01 Tensor**
 
-TensorFlow and PyTorch both are based on the concept "Tensor". 
+Both TensorFlow and PyTorch  are based on the concept "Tensor". 
 
-However, the
-term "Variable" in each framework is used in different way.
+However, the term "Variable" in each framework is used in different way.
 
 **TensorFlow**
 
-IF
-you want to declare mutable variable (weight and bias): use **tf.Variable**  
-IF
-you want to declare immutable variable (a constant that will never change): use
+If you want to declare mutable variable (weight and bias): use **tf.Variable**  
+If you want to declare immutable variable (a constant that will never change): use
+
 **tf.constant**
 
 **PyTorch**
