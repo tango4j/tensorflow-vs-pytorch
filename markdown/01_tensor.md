@@ -51,7 +51,7 @@ tensors are the most commonly used special type tensors:
 > **tf.SparseTensor**
 
 
-However, tf.Variable is not internally categorized as a "Tensor" according to
+However, tf.Variable is not internally categorized as "Tensor" according to
 the class structure that we can see with "type" command in python.
 
 ```python
@@ -69,24 +69,20 @@ print('Type of tf.SparseTensor is: ', type(tf_spts))
 Threrefore, the following description would be way less confusing.  
 
 
-* tf.Variable createss Variable.  
-* tf.constant createss Tensor.  
-* tf.placeholder creates Tensor.  
-* tf.SparseTensor creates SparseTensor (which is similar to Tensor).
+* tf.Variable createss **Variable**.  
+* tf.constant createss **Tensor**.
+* tf.placeholder creates **Tensor**.
+* tf.SparseTensor creates **SparseTensor** (which is similar to Tensor).
 
 
-There are more special type tensors other than above three.
-However, there are
-regular type of tensors 
+There are more special type tensors other than above three. However, there are regular type of tensors 
 
-> **tf.zeros** 
+> **tf.zeros**   
+> **tf.ones**  
 
-> **tf.ones**
+The following dimension is usually used for batch image source. Dimension index: 
 
-The following
-dimension is usually used for batch image source.
-Dimension index: Batch x
-height x width x color-channel
+> Batch x height x width x color-channel
 
 Ex: 4 -dimensional tensor
 
