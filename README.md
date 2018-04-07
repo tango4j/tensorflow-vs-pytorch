@@ -274,24 +274,6 @@ Then, we feed the python list.
 > torch.cuda.IntTensor    
 > torch.cuda.LongTensor   
 
-
-```python
-x = torch.IntTensor(2, 4).zero_()
-y = torch.FloatTensor([[1, 2, 3], [4, 5, 6]])
-print('PyTorch tensor x:', x)
-print('PyTorch tensor y:', y)
-```
-
-
-
-If you want to use CPU, you can remove cuda. Ex: torch.FloatTensor
-
-```python
-cputensor = torch.FloatTensor([[1,2], [3,4]])
-gputensor = torch.cuda.FloatTensor([[1, 2], [3, 4]]) 
-print('CPU tensor:', cputensor)
-print('GPU tensor:', gputensor)
-```
 c.f.) In TensorFlow, this would be: 
 
 ```python
@@ -299,6 +281,22 @@ x = tf.constant([[1, 2, 3]], dtype=tf.float32, name="B")
 y = tf.Variable([[7],[11]], tf.int16, name='cat') 
 ```
 
+Usually, PyTorch Tensor is defined as below.
+```python
+x = torch.IntTensor(2, 4).zero_()
+y = torch.FloatTensor([[1, 2, 3], [4, 5, 6]])
+print('PyTorch tensor x:', x)
+print('PyTorch tensor y:', y)
+```
+
+If you want to use GPU, you can put cuda. before FloatTensor Ex: torch.cuda.FloatTensor
+
+```python
+cputensor = torch.FloatTensor([[1,2], [3,4]])
+gputensor = torch.cuda.FloatTensor([[1, 2], [3, 4]]) 
+print('CPU tensor:', cputensor)
+print('GPU tensor:', gputensor)
+```
 **(2) PyTorch's dynamic graph feature**   
 
 Unlike TensorFlow's tf.Variable, PyTorch's Variable functions differently. This is because PyTorch is based on "Autograd" which enables Define-by-Run type of computational graph. We will deal with this again later.
@@ -403,7 +401,7 @@ print('Tensorflow Tensor Type:\n', type(tensorflow_tensor))
 print('Evaluated Tensor:\n', evaluated_tensor)
 ```
 
-Or you can create a sesssion rather than using interactive session.
+Or you can create a session rather than using interactive session.
 
 ```python
 tensorflow_tensor = tf.convert_to_tensor(numpy_array, np.float32)
@@ -417,9 +415,7 @@ with sess.as_default():
 
 ### Numpy to torch.Tensor
 
-In PyTorch, the conversion is much simpler. Use 
-
-> **torch.from_numpy() **
+In PyTorch, the conversion is much simpler. Use **torch.from_numpy()**
 function to get a torch.Tensor.
 
 ```python
@@ -451,21 +447,22 @@ cuda() variable, you need to use cpu(). We will cover this later.
 
 ## **[TensorFlow]** .shape or tf.rank() followed by .eval()
 
-The dimension is called "Rank" in Tensorflow. However, like numpy .shape in-
-place variable, tensorflow also supports .shape variable.
+### .shape in TensorFlow
+
+Like numpy .shape variable, tensorflow also supports .shape variable.
 
 ```python
 my_image = tf.zeros([10, 512, 256, 3])
 shape = my_image.shape
 print('Dimension(shape) of my_image: ', shape)
 ```
+### tf.rank function   
 
-However, after graph run, the variable "rank" will hold the rank value. To
-obtain "rank" value from the tensorflow variable, we should evaluate it through
+The dimension is called "Rank" in Tensorflow. To obtain "rank" value from the tensorflow variable, we should evaluate it through
 session.
 
 ```python
-rank_var =tf.rank(my_image)
+rank_var = tf.rank(my_image)
 tf.InteractiveSession()
 rank_var_evaluated = rank_var.eval()
 print("Printing 'rank_var' does not show rank of the variable.")
@@ -473,6 +470,8 @@ print('rank_var:', rank_var)
 print('\nBut after graph run (evaluation) it obtains rank value.')
 print('Evaluated rank_var :', rank_var_evaluated)
 ```
+
+However, PyTorch does not have the concept of rank_var.eval() type routine for shape checking.
 
 ## **[PyTorch]** .shape or .size()
 
@@ -505,8 +504,7 @@ print('What is in the shape?:', list(torch_for_numpy.shape))
 
 ## **[TensorFlow]** tf.reshape
 
-Sometimes you need to reshape the tensor (e.g. Convolutional layer to full
-connected layer).
+Sometimes you need to reshape the tensor (e.g. Convolutional layer to full connected layer).
 
 ```python
 tf_tensor0 = tf.ones([2, 3, 4])  # 3D Tensor variable filled with ones.
