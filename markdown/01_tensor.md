@@ -31,7 +31,7 @@ Let's get into details.
 import tensorflow as tf
 import numpy as np
 ```
-** What is TensorFlow "Tensor" ? **  
+**What is TensorFlow "Tensor" ?**  
 The concept of "tensor" in Tensorflow is very confusing for beginners.
 When it says "tf.Tensor", that means "Class Tensor". In addition, there are some special type of tensors.
 
