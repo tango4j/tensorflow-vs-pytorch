@@ -191,14 +191,14 @@ import torch
 Unlike Tensorflow, the tensor command itself determines the data type.  
 Then, we feed the python list.
 
-> torch.cuda.FloatTensor 
-> torch.cuda.DoubleTensor
-> torch.cuda.HalfTensor
-> torch.cuda.ByteTensor 
-> torch.cuda.CharTensor 
-> torch.cuda.ShortTensor
-> torch.cuda.IntTensor 
-> torch.cuda.LongTensor
+> torch.cuda.FloatTensor  
+> torch.cuda.DoubleTensor   
+> torch.cuda.HalfTensor   
+> torch.cuda.ByteTensor    
+> torch.cuda.CharTensor    
+> torch.cuda.ShortTensor   
+> torch.cuda.IntTensor    
+> torch.cuda.LongTensor   
 
 c.f.) In TensorFlow:  x = tf.constant([[1, 2, 3]], dtype=tf.float32, name="B")
 
@@ -211,7 +211,8 @@ print('CPU tensor:', cputensor)
 print('GPU tensor:', gputensor)
 ```
 
-**(2) PyTorch's dynamic graph feature**
+**(2) PyTorch's dynamic graph feature**   
+
 Unlike TensorFlow's tf.Variable, PyTorch's Variable functions differently. This is because PyTorch is
 based on "Autograd" which enables Define-by-Run type of computational graph. We will deal with this again later.
 
@@ -231,7 +232,8 @@ print('Type of torch.Tensor: ', type(cputensor))
 
 ```
 
-**(3) What does torch.autograd.Variable contain?**
+**(3) What does torch.autograd.Variable contain?**   
+
 Because of the forementioned reasons, PyTorch's Variable contains three different
 entities as below
 
@@ -242,9 +244,7 @@ variable.
 > **grad**: Gradient obtained from Autograd feature in PyTorch.
 
 > **creator**: Variable remembers how the variable is created and what operation
-it has gone through. 
-
-(Creator does not exists as a real variable in the torch.autograd.Variable.)
+it has gone through. (Creator does not exists as a real variable in the torch.autograd.Variable.)
 
 Unlike TensorFlow, PyTorch Variable (not graph) contains the history of the Variable itself
 to enable Autograd feature. When the a variable is declared, .grad and .grad_fn
@@ -256,12 +256,13 @@ print('x.grad:', x.grad)
 print('x.grad:', x.grad_fn)
 ```
 
+**(4) Backpropagation with dynamic graph**  
+
 However, if the Variables go through some mathmatical operation and we use
 .backward() function to use Autograd feature.  
 Then we can see what is inside
 the variables .data, .grad and .grad_fn. ".grad_fn" variable contains the
 gradiemt function that has automatically assigned to the operation.
-
 
 We will discuss about this in detail later. Here, make sure you understand
 torch.autograd.Variable contains the following variables.
