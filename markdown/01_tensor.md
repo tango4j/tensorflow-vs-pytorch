@@ -408,10 +408,10 @@ torch_for_numpy = torch.from_numpy(numpy_array)
 print('If you print it, it shows the dimension - The value of torch_for numpy: \n', torch_for_numpy)
 
 ```
-if you print it, it shows the dimension - The value of torch_for numpy: 
- 
+if you print it, it shows the dimension - The value of torch_for numpy:    
+
   1  2  3   
-  4  5  6
+  4  5  6    
 [torch.LongTensor of size 2x3]
 
 ### .shape variable in PyTorch 
