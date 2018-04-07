@@ -103,6 +103,7 @@ Let's get into details.
 
 ## **[TensorFlow]** Tensors and special type of tensors
 
+### Basics for TensorFlow Tensor.
 ```python
 import tensorflow as tf
 import numpy as np
@@ -173,8 +174,10 @@ regular ones.
 tf_var0 = tf.Variable(tf.zeros((2,2)))
 print('The shape of tf_var0:', tf_var0.shape)
 ```
-In this case, type is: *tensorflow.python.ops.variables.Variable* 
-**(4) Numpy to tf.Variable**   
+In this case, type is: *tensorflow.python.ops.variables.Variable*   
+
+**(4) Numpy to tf.Variable**    
+
 Or, you can directly convert numpy into tf.Varialbe (which is tf.Tensor)
 
 ```python
@@ -207,8 +210,8 @@ Therefore, if you want to get the hang of Tenforflow you should know what are th
 
 Let's find out.
 
-### Difference between special tensors and tf.Variable (TensorFlow)
-**(1)tf.Variable **  
+### Difference between special tensors and tf.Variable (TensorFlow)  
+**(1)tf.Variable:**   
 
 - tf.Variable is **NOT** actually tensor, but rather it
 should be classified as **Variable** to avoid confusion.
@@ -228,13 +231,11 @@ mymat = tf.Variable([[7],[11]], tf.int16, name='cat')
 squarish_squares = tf.Variable([ [4, 9], [16, 25] ], tf.int32)
 ```
 
-**(2)tf.constant**  
+**(2)tf.constant:**  
 
 - tf.constant holds values that cannot be changed.
--
-tf.constant is also designed for weights and bias, but fixed value. 
--
-tf.constant value is stored in the graph and its value is replicated wherever
+- tf.constant is also designed for weights and bias, but fixed value. 
+- tf.constant value is stored in the graph and its value is replicated wherever
 the graph is loaded.
 - tf.constant does not need to be initialized. (≠
 tf.Variable)
@@ -243,7 +244,7 @@ tf.Variable)
 const_tensor = tf.constant([[7],[11]], tf.int16, name='cat') 
 ```
 
-**(3)tf.placeholder**  
+**(3)tf.placeholder:**   
 
 - tf.placeholder is designed to store values to be fed,
 such as images.
