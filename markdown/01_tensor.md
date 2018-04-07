@@ -410,9 +410,9 @@ print('If you print it, it shows the dimension - The value of torch_for numpy: \
 ```
 if you print it, it shows the dimension - The value of torch_for numpy: 
  
-  1  2  3
+  1  2  3   
   4  5  6
-[torch.LongTensor of size 2x3I]
+[torch.LongTensor of size 2x3]
 
 ### .shape variable in PyTorch 
 
