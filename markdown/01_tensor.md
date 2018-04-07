@@ -194,17 +194,14 @@ we feed the python list.
 
 > torch.cuda.FloatTensor 
 > torch.cuda.DoubleTensor
->
-torch.cuda.HalfTensor
+> torch.cuda.HalfTensor
 > torch.cuda.ByteTensor 
 > torch.cuda.CharTensor 
->
-torch.cuda.ShortTensor
+> torch.cuda.ShortTensor
 > torch.cuda.IntTensor 
 > torch.cuda.LongTensor
 
-If you
-want to use CPU, you can remove cuda. Ex: torch.FloatTensor
+If you want to use CPU, you can remove cuda. Ex: torch.FloatTensor
 
 ```python
 cputensor = torch.FloatTensor([[1,2], [3,4]])
@@ -213,9 +210,8 @@ print('CPU tensor:', cputensor)
 print('GPU tensor:', gputensor)
 ```
 
-Unlike tf.Variable, PyTorch's Variable functions differently. Since PyTorch is
-based on "Autograd" which enables Define-by-Run type of programming with
-PyTorch. We will deal with this again later.
+Unlike TensorFlow's tf.Variable, PyTorch's Variable functions differently. This is because PyTorch is
+based on "Autograd" which enables Define-by-Run type of computational graph. We will deal with this again later.
 
 ```python
 x_np = np.array([1, 2])
@@ -242,13 +238,12 @@ variable.
 
 > **grad**: Gradient obtained from Autograd feature in PyTorch.
 
->
-**creator**: Variable remembers how the variable is created and what operation
+> **creator**: Variable remembers how the variable is created and what operation
 it has gone through. 
-(*Creator does not exists as a real variable in the
+(* Creator does not exists as a real variable in the
 torch.autograd.Variable.)
 
-Unlike TensorFlow, PyTorch Variable contains the history of the Variable itself
+Unlike TensorFlow, PyTorch Variable (not graph) contains the history of the Variable itself
 to enable Autograd feature. When the a variable is declared, .grad and .grad_fn
 contain None.
 
