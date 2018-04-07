@@ -525,6 +525,7 @@ Then we feed the number 12 = 3 × 4 to the shape vector to get reshaped Tensor.
 tf_tensor1 = tf.reshape(tensor0, [2, 12])  # Make "tensor0" matrix into 2 by 12 matrix.
 print('The shape of tf_tensor1: %s' %tf_tensor1.shape)
 ```
+### Handling the Rest of Dimension with "-1"    
 
 Furthermore, reshape function supports automatic dimension shaping. Instead of
 punching in the dimensions, you could put '-1' and let the function figure out
@@ -535,7 +536,6 @@ tf_tensor2 = tf.reshape(tensor0, [2, -1])  # Make "tensor1" matrix into 4 by 6 m
 print('The shape of tf_tensor2: %s' %tf_tensor2.shape)
 ```
 
-### Handling the Rest of Dimension with "-1"
 Or you can specitfy multiple dimension and then set it '-1' to handle rest of
 the dimension.
 
@@ -553,6 +553,7 @@ PyTorch provides with .view() function for reshaping the Tensor.
 torch_tensor0 = torch.ones([2, 3, 4])
 print('The shape of torch_tensor0:', torch_tensor0.shape)
 ```
+### Handling the Rest of Dimension with "-1"   
 
 The usage of .view() is very analgous to tf.reshape() in TensorFlow.
 
