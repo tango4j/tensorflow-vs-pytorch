@@ -276,7 +276,10 @@ Then, we feed the python list.
 > torch.cuda.IntTensor    
 > torch.cuda.LongTensor   
 
-c.f.) In TensorFlow:  x = tf.constant([[1, 2, 3]], dtype=tf.float32, name="B")
+c.f.) In TensorFlow, this would have been: 
+```python
+x = tf.constant([[1, 2, 3]], dtype=tf.float32, name="B")
+```
 
 If you want to use CPU, you can remove cuda. Ex: torch.FloatTensor
 
@@ -285,7 +288,6 @@ cputensor = torch.FloatTensor([[1,2], [3,4]])
 gputensor = torch.cuda.FloatTensor([[1, 2], [3, 4]]) 
 print('CPU tensor:', cputensor)
 print('GPU tensor:', gputensor)
-```
 
 **(2) PyTorch's dynamic graph feature**   
 
