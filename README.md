@@ -574,7 +574,7 @@ print('The shape of torch_tensor2:', torch_tensor2.shape)
 
 # 6. Printing Variables   
 
-# **02 Variables **
+# 02 Variables
 
 In the last session, we learned about the difference between tf.Variables and
 tf.Tensor. In this chapter, we are going to review in-depth use of tf.Variable
@@ -596,7 +596,7 @@ import tensorflow as tf
 import numpy as np
 ```
 
-### ** - Method 1:** tf.get_variable()  
+### **Method 1:** tf.get_variable()  
 
 To get the Tensorflow Variable, we can
 use get_variable function. There are many arguments for get_variable function
@@ -624,7 +624,7 @@ if 'tf_variable_constintialized' not in locals():
 print('tf_variable has the type of :', type(tf_variable_constintialized), 'and the shape of :', tf_variable_constintialized.shape)
 ```
 
-### ** - Method 2:** tf.Variable
+### **Method 2:** tf.Variable
 
 We can also use tf.Variable() to create
 TensorFlow variables. This method is similar to pytorch.
@@ -674,7 +674,7 @@ the variable.
 > **grad**: Gradient obtained from Autograd feature in PyTorch.
 > **creator**: Variable remembers how the variable is created and what operation
 it has gone through. 
-(*Creator does not exists as a real variable in the
+(Creator does not exists as a real variable in the
 torch.autograd.Variable.)
 
 
