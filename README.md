@@ -194,7 +194,7 @@ to declare a special type tensors. (which is tf.Variable, tf.constant, tf.placeh
 tf_tensor_ones = tf.ones([3, 4, 4], dtype=tf.float64)
 print('Directly declare a Tensor: ', tf_tensor_ones)
 ```
-
+--------- 
 Okay. Now that we know what are the most commonly used TensorFlow Variables.  
 
 Note that this is very different from PyTorch, since PyTorch does not have concept of placeholder or constant.  
