@@ -206,10 +206,10 @@ If you
 want to use CPU, you can remove cuda. Ex: torch.FloatTensor
 
 ```python
-cpu_tensor = torch.FloatTensor([[1,2], [3,4]])
-gpu_tensor = torch.cuda.FloatTensor([[1, 2], [3, 4]]) 
-print('CPU tensor:', cpu_tensor)
-print('GPU tensor:', gpu_tensor)
+cputensor = torch.FloatTensor([[1,2], [3,4]])
+gputensor = torch.cuda.FloatTensor([[1, 2], [3, 4]]) 
+print('CPU tensor:', cputensor)
+print('GPU tensor:', gputensor)
 ```
 
 Unlike tf.Variable, PyTorch's Variable functions differently. Since PyTorch is
@@ -228,7 +228,8 @@ understand the difference between torch.Tensor and torch.Variable. The following
 
 ```python
 print('Type of torch.Varialbe: ', type(x))
-print('Type of torch.Tensor: ', type(cpu_tensor))
+print('Type of torch.Tensor: ', type(cputensor))   
+
 ```
 
 Because of the forementioned reason, PyTorch's Variable contains three different
