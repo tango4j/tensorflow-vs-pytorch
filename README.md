@@ -233,7 +233,7 @@ squarish_squares = tf.Variable([ [4, 9], [16, 25] ], tf.int32)
 
 **(2)tf.constant:**  
 
-- tf.constant holds values that cannot be changed.
+- tf.constant holds values that cannot be changed (=Immutable).
 - tf.constant is also designed for weights and bias, but fixed value. 
 - tf.constant value is stored in the graph and its value is replicated wherever
 the graph is loaded.
@@ -246,13 +246,10 @@ const_tensor = tf.constant([[7],[11]], tf.int16, name='cat')
 
 **(3)tf.placeholder:**   
 
-- tf.placeholder is designed to store values to be fed,
-such as images.
+- tf.placeholder is designed to store values to be fed, such as images.
 - tf.placeholder will produce an error if evaluated. Its value
-must be fed using the feed_dict optional argument to Session.run(),
-Tensor.eval(), or Operation.run().
-- tf.placeholder is usually declared with
-[dtype], [data shape]
+must be fed using the feed_dict optional argument to Session.run(), Tensor.eval(), or Operation.run().
+- tf.placeholder is usually declared with [dtype], [data shape]
 
 ```python
 placeholder_tensor = tf.placeholder(tf.float32, shape=(2, 2))
@@ -263,10 +260,12 @@ placeholder_tensor = tf.placeholder(tf.float32, shape=(2, 2))
 ```python
 import torch
 ```
+### Basics for PyTorch Tensors.
+
+**(1) PyTorch Tensor.**    
 
 Unlike Tensorflow, the tensor command itself determines the data type.  
-Then,
-we feed the python list.
+Then, we feed the python list.
 
 > torch.cuda.FloatTensor 
 > torch.cuda.DoubleTensor
@@ -277,6 +276,8 @@ we feed the python list.
 > torch.cuda.IntTensor 
 > torch.cuda.LongTensor
 
+c.f.) In TensorFlow:  x = tf.constant([[1, 2, 3]], dtype=tf.float32, name="B")
+
 If you want to use CPU, you can remove cuda. Ex: torch.FloatTensor
 
 ```python
@@ -286,6 +287,7 @@ print('CPU tensor:', cputensor)
 print('GPU tensor:', gputensor)
 ```
 
+**(2) PyTorch's dynamic graph feature**
 Unlike TensorFlow's tf.Variable, PyTorch's Variable functions differently. This is because PyTorch is
 based on "Autograd" which enables Define-by-Run type of computational graph. We will deal with this again later.
 
@@ -305,10 +307,11 @@ print('Type of torch.Tensor: ', type(cputensor))
 
 ```
 
-Because of the forementioned reason, PyTorch's Variable contains three different
+**(3) What does torch.autograd.Variable contain?**
+Because of the forementioned reasons, PyTorch's Variable contains three different
 entities as below
 
-**torch.autograd.Variable**
+**torch.autograd.Variable:**
 > **data**: Raw data Variable contains inside the
 variable.
 
@@ -316,8 +319,8 @@ variable.
 
 > **creator**: Variable remembers how the variable is created and what operation
 it has gone through. 
-(* Creator does not exists as a real variable in the
-torch.autograd.Variable.)
+
+(Creator does not exists as a real variable in the torch.autograd.Variable.)
 
 Unlike TensorFlow, PyTorch Variable (not graph) contains the history of the Variable itself
 to enable Autograd feature. When the a variable is declared, .grad and .grad_fn
@@ -336,8 +339,7 @@ the variables .data, .grad and .grad_fn. ".grad_fn" variable contains the
 gradiemt function that has automatically assigned to the operation.
 
 
-We will
-discuss about this in detail later. Here, make sure you understand
+We will discuss about this in detail later. Here, make sure you understand
 torch.autograd.Variable contains the following variables.
 
 ```python
