@@ -484,6 +484,12 @@ torch_for_numpy = torch.from_numpy(numpy_array)
 print('If you print it, it shows the dimension - The value of torch_for numpy: \n', torch_for_numpy)
 
 ```
+if you print it, it shows the dimension - The value of torch_for numpy: 
+ 
+  1  2  3
+  4  5  6
+[torch.LongTensor of size 2x3I]
+
 ### .shape variable in PyTorch 
 
 But sometimes we want to get a numerical output. Thus:
@@ -554,7 +560,7 @@ The usage of .view() is very analgous to tf.reshape() in TensorFlow.
 torch_tensor1 = torch_tensor0.view(2, -1)
 print('The shape of torch_tensor1:', torch_tensor1.shape)
 ```
-### Copy the Dimension of other PyTorch tensor .view_as()
+### Copy the Dimension of other PyTorch Tensor .view_as()
 Also, view_as() function copies the shape of the input Tensor and shape the
 corresponding Tensor.
 
