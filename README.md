@@ -207,7 +207,7 @@ Therefore, if you want to get the hang of Tenforflow you should know what are th
 Let's find out.
 
 ### Difference between special tensors and tf.Variable (TensorFlow)  
-**(1)tf.Variable:**   
+**(1) tf.Variable:**   
 
 - tf.Variable is **NOT** actually tensor, but rather it
 should be classified as **Variable** to avoid confusion.
@@ -227,7 +227,7 @@ mymat = tf.Variable([[7],[11]], tf.int16, name='cat')
 squarish_squares = tf.Variable([ [4, 9], [16, 25] ], tf.int32)
 ```
 
-**(2)tf.constant:**  
+**(2) tf.constant:**  
 
 - tf.constant holds values that cannot be changed (=Immutable).
 - tf.constant is also designed for weights and bias, but fixed value. 
@@ -240,7 +240,7 @@ tf.Variable)
 const_tensor = tf.constant([[7],[11]], tf.int16, name='cat') 
 ```
 
-**(3)tf.placeholder:**   
+**(3) tf.placeholder:**   
 
 - tf.placeholder is designed to store values to be fed, such as images.
 - tf.placeholder will produce an error if evaluated. Its value
