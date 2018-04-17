@@ -736,7 +736,7 @@ comes to data compuation.
 
 **How "Graph" is defined in each framework?**
 
-**TensorFlow:** 
+**TensorFlow** 
 
 - Static graph.
 
@@ -759,7 +759,7 @@ computation for each data point.
 (2) The structure becomes more
 complicated and harder to debug than dynamic graph. 
 
-**PyTorch:** 
+**PyTorch** 
 
 - Dynamic graph.
 
@@ -843,7 +843,7 @@ session wants to launch. If not specified, automatically links default graph.
 (3) **config**: A ConfigProto protocol buffer with configuration options.
 * Unlike tf.Graph, tf.Session should be placed before the operations. 
 
-*tf.Session.run() function excutes the given operation.
+* tf.Session.run() function excutes the given operation.
 
 *Example 2)*
 
