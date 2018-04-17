@@ -29,10 +29,9 @@ the dtype as "tf.float32". (This is different from python3 numpy, which uses
 float64 as a default dtype)
 
 ```python
-if 'tf_variable' not in locals(): # To prevent overwriting problem.
-    tf_variable = tf.get_variable('tensorflow_variable', [1, 2, 3])
-    tf_variable_int = tf.get_variable('tensorflow_int_var', [1, 2, 3], dtype=tf.int32)
-    tf_variable_intialized = tf.get_variable('tensorflow_var_init', [1, 2, 3], dtype=tf.int32, initializer=tf.zeros_initializer)
+tf_variable = tf.get_variable('tensorflow_variable', [1, 2, 3])
+tf_variable_int = tf.get_variable('tensorflow_int_var', [1, 2, 3], dtype=tf.int32)
+tf_variable_intialized = tf.get_variable('tensorflow_var_init', [1, 2, 3], dtype=tf.int32, initializer=tf.zeros_initializer)
     
 ```
 
@@ -43,8 +42,7 @@ However, tf.Variable can be initialized with tf.constant, which is tf.Tensor
 object.
 
 ```python
-if 'tf_variable_constintialized' not in locals():
-    tf_variable_constintialized = tf.get_variable('tensorflow_var_init_const', dtype=tf.int32, initializer=tf.constant([1,2]))
+tf_variable_constintialized = tf.get_variable('tensorflow_var_init_const', dtype=tf.int32, initializer=tf.constant([1,2]))
 print('tf_variable has the type of :', type(tf_variable_constintialized), 'and the shape of :', tf_variable_constintialized.shape)
 ```
 
