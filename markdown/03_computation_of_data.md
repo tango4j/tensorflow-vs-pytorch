@@ -71,16 +71,14 @@ operations and tensors, otherwise we use default graph.
 * tf.Graph is needed
 whenever there are multiple models in one file.
 
-* tf.Graph contains two
-informations. 
+* tf.Graph contains two informations. 
   
-    (1) **Graph Structure**: Nodes(Operations) and
+(1) **Graph Structure**: Nodes(Operations) and
 Edges(Tensors) of the graph.
   
-    (2) **Graph Collections**: Store all the
+(2) **Graph Collections**: Store all the
 collections of metadata. Use tf.add_to_collection and tf.get_collection to
 access thses collections. 
-    
     
 * If we do not specify tf.Graph, TF
 automatically defines default graph which we cannot see in the code.
