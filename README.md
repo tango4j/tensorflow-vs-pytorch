@@ -780,7 +780,7 @@ computational graph.
 
 ## **[TensorFlow]** Graph and session
 
-# tf.Graph: 
+### tf.Graph: 
 
 What is tf.Graph?
 
@@ -825,7 +825,7 @@ adds it to a tf.Graph and returns a tf.Tensor.
 tf.Operation that calculates multiplication of x and y, adds it to a tf.Graph
 and returns a Tensor.
 
-# tf.Session: 
+### tf.Session: 
 
 What is tf.Session?
 
@@ -868,7 +868,7 @@ with tf.Session() as sess:
   print(sess.run(z1))
 ```
 
-# tf.InteractiveSession:
+### tf.InteractiveSession:
 
 TensorFlow supports tf.InteractiveSession() that enables more convenient form of
 session. 
