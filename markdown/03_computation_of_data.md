@@ -17,7 +17,7 @@ comes to data compuation.
 
 **How "Graph" is defined in each framework?**
 
-**TensorFlow** 
+### TensorFlow 
 
 - Static graph.
 
@@ -40,7 +40,7 @@ computation for each data point.
 (2) The structure becomes more
 complicated and harder to debug than dynamic graph. 
 
-**PyTorch** 
+### PyTorch 
 
 - Dynamic graph.
 
