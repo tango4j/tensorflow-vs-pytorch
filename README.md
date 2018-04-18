@@ -31,7 +31,8 @@ The whole content was written in Ipython Notebook then converted into MarkDown. 
 >>[(3) What does torch.autograd.Variable contain?](https://github.com/tango4j/tensorflow-vs-pytorch#3-what-does-torchautogradvariable-contain)   
 >>[(4) Backpropagation with dynamic graph](https://github.com/tango4j/tensorflow-vs-pytorch#4-backpropagation-with-dynamic-graph)   
 
->[2. Tensor Numpy Conversion](https://github.com/tango4j/tensorflow-vs-pytorch#2-tensor-numpy-conversion)  
+>[2. Tensor Numpy Conversion](https://github.com/tango4j/tensorflow-vs-pytorch#2-tensor-numpy-conversion)   
+
 >[[TensorFlow] tf.convert_to_tensor or .eval()](https://github.com/tango4j/tensorflow-vs-pytorch#tensorflow-tfconvert_to_tensor-or-eval)  
 >>[Numpy to tf.Tensor](https://github.com/tango4j/tensorflow-vs-pytorch#numpy-to-tftensor)   
 >>[tf.Tensor to Numpy](https://github.com/tango4j/tensorflow-vs-pytorch#tftensor-to-numpy)   
@@ -41,6 +42,7 @@ The whole content was written in Ipython Notebook then converted into MarkDown. 
 >>[torch.Tensor to Numpy](https://github.com/tango4j/tensorflow-vs-pytorch#torchtensor-to-numpy)    
 
 > [3. Indentifying The Dimension](https://github.com/tango4j/tensorflow-vs-pytorch#3-indentifying-the-dimension)    
+
 > [[TensorFlow] .shape or tf.rank() followed by .eval()](https://github.com/tango4j/tensorflow-vs-pytorch#tensorflow-shape-or-tfrank-followed-by-eval)   
 >> [.shape variable in TensorFlow](https://github.com/tango4j/tensorflow-vs-pytorch#shape-variable-in-tensorflow)   
 >> [tf.rank function](https://github.com/tango4j/tensorflow-vs-pytorch#tfrank-function)   
@@ -50,6 +52,7 @@ The whole content was written in Ipython Notebook then converted into MarkDown. 
 >>[.shape variable in PyTorch](https://github.com/tango4j/tensorflow-vs-pytorch#shape-variable-in-pytorch)   
 
 >[4. Shaping the Tensor Variables](https://github.com/tango4j/tensorflow-vs-pytorch#4-shaping-the-tensor-variables)   
+
 >[[TensorFlow] tf.reshape](https://github.com/tango4j/tensorflow-vs-pytorch#tensorflow-tfreshape)   
 >>[Reshape tf.Tensor with tf.reshape](https://github.com/tango4j/tensorflow-vs-pytorch#reshape-tftensor-with-tfreshape)   
 >>[Handling the Rest of Dimension with "-1"](https://github.com/tango4j/tensorflow-vs-pytorch#handling-the-rest-of-dimension-with--1-1)
@@ -57,10 +60,9 @@ The whole content was written in Ipython Notebook then converted into MarkDown. 
 >> [Reshape PyTorch Tensor with .view()](https://github.com/tango4j/tensorflow-vs-pytorch#reshape-pytorch-tensor-with-view)   
 >> [Handling the Rest of Dimension with "-1"](https://github.com/tango4j/tensorflow-vs-pytorch#handling-the-rest-of-dimension-with--1-1)   
 >> [Copy the Dimension of other PyTorch Tensor .view_as()](https://github.com/tango4j/tensorflow-vs-pytorch#copy-the-dimension-of-other-pytorch-tensor-view_as)   
-> [4. Shaping the Tensor Variables](https://github.com/tango4j/tensorflow-vs-pytorch#4-shaping-the-tensor-variables)   
-> [5. Datatype Conversion](https://github.com/tango4j/tensorflow-vs-pytorch#5-datatype-conversion)   
-> [6. Printing Variables](https://github.com/tango4j/tensorflow-vs-pytorch#6-printing-variables)   
-
+> [5. Shaping the Tensor Variables](https://github.com/tango4j/tensorflow-vs-pytorch#4-shaping-the-tensor-variables)   
+> [6. Datatype Conversion](https://github.com/tango4j/tensorflow-vs-pytorch#5-datatype-conversion)   
+> [7. Printing Variables](https://github.com/tango4j/tensorflow-vs-pytorch#6-printing-variables)   
 
 [**02. Variable**](https://github.com/tango4j/tensorflow-vs-pytorch#02-variables-)   
 >[1. Creating a Variable](https://github.com/tango4j/tensorflow-vs-pytorch#1-creating-a-variable)   
@@ -70,7 +72,6 @@ The whole content was written in Ipython Notebook then converted into MarkDown. 
 
 >[[PyTorch] Creating PyTorch Variable - torch.autograd.Variable](https://github.com/tango4j/tensorflow-vs-pytorch#pytorch-creating-pytorch-variable---torchautogradvariable)   
 >>[The concept of Pytorch Variable](https://github.com/tango4j/tensorflow-vs-pytorch#the-concept-of-pytorch-variable)   
-
 
 [**03. Computation of data**](https://github.com/tango4j/tensorflow-vs-pytorch#03-computaion-of-data)   
 >[1. Tensorflow VS PyTorch Comparison](https://github.com/tango4j/tensorflow-vs-pytorch#1-tensorflow-vs-pytorch-comparison)   
