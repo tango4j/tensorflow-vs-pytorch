@@ -6,10 +6,10 @@ The whole content was written in Ipython Notebook then converted into MarkDown. 
 
 ## TABLE OF CONTENTS
 
-[**01. Tensor**](https://github.com/tango4j/tensorflow-vs-pytorch#01-tensor)  
->[[TensorFlow] - Tensors and special type of tensors](https://github.com/tango4j/tensorflow-vs-pytorch#tensorflow-tensors-and-special-type-of-tensors)   
+[**01. Tensor**](https://github.com/tango4j/tensorflow-vs-pytorch#01-tensor)   
 
 > [**1. The Concept of Tensor**](https://github.com/tango4j/tensorflow-vs-pytorch#01-tensor)   
+>[[TensorFlow] - Tensors and special type of tensors](https://github.com/tango4j/tensorflow-vs-pytorch#tensorflow-tensors-and-special-type-of-tensors)  
 
 >> [(1) What is TensorFlow "Tensor" ?](https://github.com/tango4j/tensorflow-vs-pytorch#1-what-is-tensorflow-tensor-)   
 >> [(2) Special type Tensors](https://github.com/tango4j/tensorflow-vs-pytorch#2-special-type-tensors)   
