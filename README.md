@@ -6,21 +6,63 @@ The whole content was written in Ipython Notebook then converted into MarkDown. 
 
 ### TABLE OF CONTENTS
 
-[**01. Tensor**](https://github.com/tango4j/tensorflow-vs-pytorch#01-tensor)  
+[**01. Tensor**] (https://github.com/tango4j/tensorflow-vs-pytorch#01-tensor)  
+[[TensorFlow] Tensors and special type of tensors] (https://github.com/tango4j/tensorflow-vs-pytorch#tensorflow-tensors-and-special-type-of-tensors)
+[1. The Concept of Tensor] (https://github.com/tango4j/tensorflow-vs-pytorch#01-tensor)  
+[(1) What is TensorFlow "Tensor" ?] (https://github.com/tango4j/tensorflow-vs-pytorch#1-what-is-tensorflow-tensor-)
+[(2) Special type Tensors] (https://github.com/tango4j/tensorflow-vs-pytorch#2-special-type-tensors)
+[(3) Convention for Tensor dimension] (https://github.com/tango4j/tensorflow-vs-pytorch#3-convention-for-tensor-dimension)
+[(4) Numpy to tf.Variable] (https://github.com/tango4j/tensorflow-vs-pytorch#4-numpy-to-tfvariable)
+[(5) Direct declaration] (https://github.com/tango4j/tensorflow-vs-pytorch#5-direct-declaration)
+[Difference Between Special Tensors and tf.Variable (TensorFlow)] (https://github.com/tango4j/tensorflow-vs-pytorch#difference-between-special-tensors-and-tfvariable-tensorflow)
+[(1) tf.Variable] (https://github.com/tango4j/tensorflow-vs-pytorch#1-tfvariable)
+[(2) tf.constant] (https://github.com/tango4j/tensorflow-vs-pytorch#2-tfconstant)
+[(3) tf.placeholder] (https://github.com/tango4j/tensorflow-vs-pytorch#3-tfplaceholder)
+[[PyTorch] Torch tensor and torch.Variable] (https://github.com/tango4j/tensorflow-vs-pytorch#pytorch-torch-tensor-and-torchvariable)
+[Basics for PyTorch Tensors.] (https://github.com/tango4j/tensorflow-vs-pytorch#basics-for-pytorch-tensors)
 
-[1. The Concept of Tensor](https://github.com/tango4j/tensorflow-vs-pytorch#01-tensor)  
-[2. Tensor Numpy Conversion](https://github.com/tango4j/tensorflow-vs-pytorch#2-tensor-numpy-conversion)  
-[3. Indentifying The Dimension](https://github.com/tango4j/tensorflow-vs-pytorch#3-indentifying-the-dimension)  
-[4. Shaping the Tensor Variables](https://github.com/tango4j/tensorflow-vs-pytorch#4-shaping-the-tensor-variables)  
+[(1) PyTorch Tensor.] (https://github.com/tango4j/tensorflow-vs-pytorch#1-pytorch-tensor)
+[(2) PyTorch's dynamic graph feature] (https://github.com/tango4j/tensorflow-vs-pytorch#2-pytorchs-dynamic-graph-feature)
+[(3) What does torch.autograd.Variable contain?] (https://github.com/tango4j/tensorflow-vs-pytorch#3-what-does-torchautogradvariable-contain)
+[(4) Backpropagation with dynamic graph] (https://github.com/tango4j/tensorflow-vs-pytorch#4-backpropagation-with-dynamic-graph)
+
+[2. Tensor Numpy Conversion] (https://github.com/tango4j/tensorflow-vs-pytorch#2-tensor-numpy-conversion)  
+[[TensorFlow]tf.convert_to_tensor or .eval()] (https://github.com/tango4j/tensorflow-vs-pytorch#tensorflow-tfconvert_to_tensor-or-eval)
+[Numpy to tf.Tensor] (https://github.com/tango4j/tensorflow-vs-pytorch#numpy-to-tftensor)
+[tf.Tensor to Numpy] (https://github.com/tango4j/tensorflow-vs-pytorch#tftensor-to-numpy)
+[[PyTorch] .numpy() or torch.from_numpy()] (https://github.com/tango4j/tensorflow-vs-pytorch#pytorch-numpy-or-torchfrom_numpy)
+[Numpy to torch.Tensor] (https://github.com/tango4j/tensorflow-vs-pytorch#numpy-to-torchtensor)
+[torch.Tensor to Numpy] (https://github.com/tango4j/tensorflow-vs-pytorch#torchtensor-to-numpy)
+[3. Indentifying The Dimension] (https://github.com/tango4j/tensorflow-vs-pytorch#3-indentifying-the-dimension)  
+[[TensorFlow] .shape or tf.rank() followed by .eval()] (https://github.com/tango4j/tensorflow-vs-pytorch#tensorflow-shape-or-tfrank-followed-by-eval)
+[.shape variable in TensorFlow] (https://github.com/tango4j/tensorflow-vs-pytorch#shape-variable-in-tensorflow)
+[tf.rank function] (https://github.com/tango4j/tensorflow-vs-pytorch#tfrank-function)
+[[PyTorch] .shape or .size()] (https://github.com/tango4j/tensorflow-vs-pytorch#pytorch-shape-or-size)
+[Automatically Displayed PyTorch Tensor Dimension] (https://github.com/tango4j/tensorflow-vs-pytorch#automatically-displayed-pytorch-tensor-dimension)
+[.shape variable in PyTorch] (https://github.com/tango4j/tensorflow-vs-pytorch#shape-variable-in-pytorch)
+4. Shaping the Tensor Variables(https://github.com/tango4j/tensorflow-vs-pytorch#4-shaping-the-tensor-variables)
+[TensorFlow] tf.reshape(https://github.com/tango4j/tensorflow-vs-pytorch#tensorflow-tfreshape)
+[Reshape tf.Tensor with tf.reshape] (https://github.com/tango4j/tensorflow-vs-pytorch#reshape-tftensor-with-tfreshape)
+[Handling the Rest of Dimension with "-1"] (https://github.com/tango4j/tensorflow-vs-pytorch#handling-the-rest-of-dimension-with--1-1)
+[[PyTorch] .view() function](https://github.com/tango4j/tensorflow-vs-pytorch#pytorch-view-function)
+Reshape PyTorch Tensor with .view()
+[Handling the Rest of Dimension with "-1"] (https://github.com/tango4j/tensorflow-vs-pytorch#handling-the-rest-of-dimension-with--1-1)
+[Copy the Dimension of other PyTorch Tensor .view_as()] (https://github.com/tango4j/tensorflow-vs-pytorch#copy-the-dimension-of-other-pytorch-tensor-view_as)
+[4. Shaping the Tensor Variables] (https://github.com/tango4j/tensorflow-vs-pytorch#4-shaping-the-tensor-variables)  
+[5. Datatype Conversion] (https://github.com/tango4j/tensorflow-vs-pytorch#5-datatype-conversion)
+[6. Printing Variables] (https://github.com/tango4j/tensorflow-vs-pytorch#6-printing-variables)
 
 [**02. Variable**](https://github.com/tango4j/tensorflow-vs-pytorch#02-variables-)
+[1. Creating a Variable] (https://github.com/tango4j/tensorflow-vs-pytorch#1-creating-a-variable)
+[[TensorFlow]] (https://github.com/tango4j/tensorflow-vs-pytorch#tensorflow)
+[Method 1: tf.get_variable()] (https://github.com/tango4j/tensorflow-vs-pytorch#method-1-tfget_variable)
+[Method 2: tf.Variable] (https://github.com/tango4j/tensorflow-vs-pytorch#method-2-tfvariable)
+[[PyTorch] Creating PyTorch Variable - torch.autograd.Variable] (https://github.com/tango4j/tensorflow-vs-pytorch#pytorch-creating-pytorch-variable---torchautogradvariable)
+[The concept of Pytorch Variable] (https://github.com/tango4j/tensorflow-vs-pytorch#the-concept-of-pytorch-variable)
 
-[1. Creating a Variable](https://github.com/tango4j/tensorflow-vs-pytorch#1-creating-a-variable)
-
-[**03. Computation of data**](https://github.com/tango4j/tensorflow-vs-pytorch#03-computaion-of-data)
-
-[1. Dynamic Graph and Static Graph](https://github.com/tango4j/tensorflow-vs-pytorch#1-dynamic-graph-and-static-graph)
-
+[**03. Computation of data**] (https://github.com/tango4j/tensorflow-vs-pytorch#03-computaion-of-data)
+[1. Tensorflow VS PyTorch Comparison] (https://github.com/tango4j/tensorflow-vs-pytorch#1-tensorflow-vs-pytorch-comparison)
+[2. Dynamic Graph and Static Graph] (https://github.com/tango4j/tensorflow-vs-pytorch#1-dynamic-graph-and-static-graph)
 
 - There are a few distinct differences between Tensorflow and Pytorch when it comes to data compuation.
 
@@ -98,8 +140,7 @@ Let's get into details.
 
 ### Basics for TensorFlow Tensors
 
-### (1) What is TensorFlow "Tensor" ?   
-
+**(1) What is TensorFlow "Tensor" ?**  
 The concept of "tensor" in Tensorflow is very confusing for beginners.
 When it says "tf.Tensor", that means "Class Tensor". In addition, there are some special type of tensors.
 
@@ -139,7 +180,7 @@ Threrefore, the following description would be way less confusing.
 * tf.placeholder creates **Tensor**.
 * tf.SparseTensor creates **SparseTensor** (which is similar to Tensor).
 
-### (2) Special type Tensors:   
+**(2) Special type Tensors:**  
 
 There are more special type tensors other than above three. For example, regular type of tensors such as:
 
@@ -148,7 +189,7 @@ There are more special type tensors other than above three. For example, regular
 
 These are TensorFlow **Tensors**.
 
-### (3) Convention for Tensor dimension   
+**(3) Convention for Tensor dimension**  
 
 The following dimension is usually used for batch image source. Dimension index: 
 
@@ -171,7 +212,7 @@ print('The shape of tf_var0:', tf_var0.shape)
 ```
 In this case, type is: *tensorflow.python.ops.variables.Variable*   
 
-### (4) Numpy to tf.Variable   
+**(4) Numpy to tf.Variable**    
 
 Or, you can directly convert numpy into tf.Varialbe (which is tf.Tensor)
 
@@ -181,7 +222,7 @@ print('The shape of tf_var1:', tf_var1.shape)
 ```
 Also in this case, just as in (3), data type is: *tensorflow.python.ops.variables.Variable*. 
 
-### (5) Direct declaration
+**(5) Direct declaration**   
 
 If we want to directly declare tensorflow Tensor, we have to specify 
 
@@ -206,7 +247,7 @@ Therefore, if you want to get the hang of Tenforflow you should know what are th
 Let's find out.
 
 ### Difference Between Special Tensors and tf.Variable (TensorFlow)  
-### (1) tf.Variable:   
+**(1) tf.Variable:**   
 
 - tf.Variable is **NOT** actually tensor, but rather it
 should be classified as **Variable** to avoid confusion.
@@ -226,7 +267,7 @@ mymat = tf.Variable([[7],[11]], tf.int16, name='cat')
 squarish_squares = tf.Variable([ [4, 9], [16, 25] ], tf.int32)
 ```
 
-### (2) tf.constant:   
+**(2) tf.constant:**  
 
 - tf.constant holds values that cannot be changed (=Immutable).
 - tf.constant is also designed for weights and bias, but fixed value. 
@@ -239,7 +280,7 @@ tf.Variable)
 const_tensor = tf.constant([[7],[11]], tf.int16, name='cat') 
 ```
 
-### (3) tf.placeholder:    
+**(3) tf.placeholder:**   
 
 - tf.placeholder is designed to store values to be fed, such as images.
 - tf.placeholder will produce an error if evaluated. Its value
@@ -254,7 +295,7 @@ placeholder_tensor = tf.placeholder(tf.float32, shape=(2, 2))
 
 ### Basics for PyTorch Tensors.
 
-### (1) PyTorch Tensor.   
+**(1) PyTorch Tensor.**    
 
 Unlike Tensorflow, the tensor command itself determines the data type.  
 Then, we feed the python list.
@@ -291,7 +332,7 @@ gputensor = torch.cuda.FloatTensor([[1, 2], [3, 4]])
 print('CPU tensor:', cputensor)
 print('GPU tensor:', gputensor)
 ```
-### (2) PyTorch's dynamic graph feature 
+**(2) PyTorch's dynamic graph feature**   
 
 Unlike TensorFlow's tf.Variable, PyTorch's Variable functions differently. This is because PyTorch is based on "Autograd" which enables Define-by-Run type of computational graph. We will deal with this again later.
 
@@ -311,7 +352,7 @@ print('Type of torch.Tensor: ', type(cputensor))
 
 ```
 
-### (3) What does torch.autograd.Variable contain?   
+**(3) What does torch.autograd.Variable contain?**   
 
 Because of the aforementioned reasons, PyTorch's Variable contains three different
 entities as below
@@ -335,7 +376,7 @@ print('x.grad:', x.grad)
 print('x.grad:', x.grad_fn)
 ```
 
-### (4) Backpropagation with dynamic graph   
+**(4) Backpropagation with dynamic graph**  
 
 However, if the Variables go through some mathematical operation and we use
 .backward() function to use Autograd feature.  
@@ -367,7 +408,10 @@ Numpy automatically sets the datatype as float64.
 
 However, TensorFlow uses
 float32 as a default. 
-To convert a tf.Tensor from numpy array, use **tf.convert_to_tensor()**
+To convert a tf.Tensor from numpy array, use 
+
+>
+**tf.convert_to_tensor()**
 
 function as below.
 
@@ -700,7 +744,6 @@ print('z.grad_fn:', z.grad_fn)
 Here, x is not assigned with grad_fn because we started the operation from x.
 # 03 **Computaion of Data**
 
-# 1. Tensorflow VS PyTorch Comparison 
 There are a few distinct differences between Tensorflow and Pytorch when it
 comes to data compuation.
 
@@ -752,7 +795,7 @@ computational graph.
 (1) Repetitive computation can lead to slower computation speed. 
 (2) Difficult to distribute the work load in the beginning of training.
 
-# 2. Dynamic Graph and Static Graph
+# 1. Dynamic Graph and Static Graph
 
 ## **[TensorFlow]** Graph and session
 
