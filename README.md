@@ -16,12 +16,7 @@ The whole content was written in Ipython Notebook then converted into MarkDown. 
 >> [(3) Convention for Tensor dimension](https://github.com/tango4j/tensorflow-vs-pytorch#3-convention-for-tensor-dimension)     
 >> [(4) Numpy to tf.Variable](https://github.com/tango4j/tensorflow-vs-pytorch#4-numpy-to-tfvariable)   
 >> [(5) Direct declaration](https://github.com/tango4j/tensorflow-vs-pytorch#5-direct-declaration)   
-
-> [Difference Between Special Tensors and tf.Variable (TensorFlow)](https://github.com/tango4j/tensorflow-vs-pytorch#difference-between-special-tensors-and-tfvariable-tensorflow)   
-
->>[(1) tf.Variable](https://github.com/tango4j/tensorflow-vs-pytorch#1-tfvariable)   
->>[(2) tf.constant](https://github.com/tango4j/tensorflow-vs-pytorch#2-tfconstant)   
->>[(3) tf.placeholder](https://github.com/tango4j/tensorflow-vs-pytorch#3-tfplaceholder)   
+>> [(6) Difference Between Special Tensors and tf.Variable (TensorFlow)](https://github.com/tango4j/tensorflow-vs-pytorch#difference-between-special-tensors-and-tfvariable-tensorflow)   
 
 >[[PyTorch] - Torch tensor and torch.Variable](https://github.com/tango4j/tensorflow-vs-pytorch#pytorch-torch-tensor-and-torchvariable)   
 >[Basics for PyTorch Tensors.](https://github.com/tango4j/tensorflow-vs-pytorch#basics-for-pytorch-tensors)   
