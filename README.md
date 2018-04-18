@@ -128,6 +128,58 @@ The whole content was written in Ipython Notebook then converted into MarkDown. 
     (2) Difficult to distribute the work load in the beginning of training.
 
 
+- There are a few distinct differences between Tensorflow and Pytorch when it comes to data compuation.
+
+|               | TensorFlow      | PyTorch        |
+|---------------|-----------------|----------------|
+| Framework     | Define-and-run  | Define-by-run  |
+| Graph         | Static | Dynamic|
+| Debug         | Non-native debugger (tfdbg) |pdb(ipdb) Python debugger|
+
+**How "Graph" is defined in each framework?**
+
+#**TensorFlow:** 
+
+- Static graph.
+
+- Once define a computational graph and excute the same graph repeatedly.
+
+- Pros: 
+
+    (1) Optimizes the graph upfront and makes better distributed computation.
+    
+    (2) Repeated computation does not cause additional computational cost.
+
+
+- Cons: 
+
+    (1) Difficult to perform different computation for each data point.
+    
+    (2) The structure becomes more complicated and harder to debug than dynamic graph. 
+
+
+#**PyTorch:** 
+
+- Dynamic graph.
+
+- Does not define a graph in advance. Every forward pass makes a new computational graph.
+
+- Pros: 
+
+    (1) Debugging is easier than static graph.
+    
+    (2) Keep the whole structure concise and intuitive. 
+    
+    (3) For each data point and time different computation can be performed.
+    
+    
+- Cons: 
+
+    (1) Repetitive computation can lead to slower computation speed. 
+    
+    (2) Difficult to distribute the work load in the beginning of training.
+
+
 # **01 Tensor**
 
 Both TensorFlow and PyTorch  are based on the concept "Tensor". 
@@ -152,7 +204,8 @@ Let's get into details.
 
 ### Basics for TensorFlow Tensors
 
-**(1) What is TensorFlow "Tensor" ?**  
+### (1) What is TensorFlow "Tensor" ?   
+
 The concept of "tensor" in Tensorflow is very confusing for beginners.
 When it says "tf.Tensor", that means "Class Tensor". In addition, there are some special type of tensors.
 
@@ -192,7 +245,7 @@ Threrefore, the following description would be way less confusing.
 * tf.placeholder creates **Tensor**.
 * tf.SparseTensor creates **SparseTensor** (which is similar to Tensor).
 
-**(2) Special type Tensors:**  
+### (2) Special type Tensors:   
 
 There are more special type tensors other than above three. For example, regular type of tensors such as:
 
@@ -201,7 +254,7 @@ There are more special type tensors other than above three. For example, regular
 
 These are TensorFlow **Tensors**.
 
-**(3) Convention for Tensor dimension**  
+### (3) Convention for Tensor dimension   
 
 The following dimension is usually used for batch image source. Dimension index: 
 
@@ -224,7 +277,7 @@ print('The shape of tf_var0:', tf_var0.shape)
 ```
 In this case, type is: *tensorflow.python.ops.variables.Variable*   
 
-**(4) Numpy to tf.Variable**    
+### (4) Numpy to tf.Variable   
 
 Or, you can directly convert numpy into tf.Varialbe (which is tf.Tensor)
 
@@ -234,7 +287,7 @@ print('The shape of tf_var1:', tf_var1.shape)
 ```
 Also in this case, just as in (3), data type is: *tensorflow.python.ops.variables.Variable*. 
 
-**(5) Direct declaration**   
+### (5) Direct declaration
 
 If we want to directly declare tensorflow Tensor, we have to specify 
 
@@ -259,7 +312,7 @@ Therefore, if you want to get the hang of Tenforflow you should know what are th
 Let's find out.
 
 ### Difference Between Special Tensors and tf.Variable (TensorFlow)  
-**(1) tf.Variable:**   
+### (1) tf.Variable:   
 
 - tf.Variable is **NOT** actually tensor, but rather it
 should be classified as **Variable** to avoid confusion.
@@ -279,7 +332,7 @@ mymat = tf.Variable([[7],[11]], tf.int16, name='cat')
 squarish_squares = tf.Variable([ [4, 9], [16, 25] ], tf.int32)
 ```
 
-**(2) tf.constant:**  
+### (2) tf.constant:   
 
 - tf.constant holds values that cannot be changed (=Immutable).
 - tf.constant is also designed for weights and bias, but fixed value. 
@@ -292,7 +345,7 @@ tf.Variable)
 const_tensor = tf.constant([[7],[11]], tf.int16, name='cat') 
 ```
 
-**(3) tf.placeholder:**   
+### (3) tf.placeholder:    
 
 - tf.placeholder is designed to store values to be fed, such as images.
 - tf.placeholder will produce an error if evaluated. Its value
@@ -307,7 +360,7 @@ placeholder_tensor = tf.placeholder(tf.float32, shape=(2, 2))
 
 ### Basics for PyTorch Tensors.
 
-**(1) PyTorch Tensor.**    
+### (1) PyTorch Tensor.   
 
 Unlike Tensorflow, the tensor command itself determines the data type.  
 Then, we feed the python list.
@@ -344,7 +397,7 @@ gputensor = torch.cuda.FloatTensor([[1, 2], [3, 4]])
 print('CPU tensor:', cputensor)
 print('GPU tensor:', gputensor)
 ```
-**(2) PyTorch's dynamic graph feature**   
+### (2) PyTorch's dynamic graph feature 
 
 Unlike TensorFlow's tf.Variable, PyTorch's Variable functions differently. This is because PyTorch is based on "Autograd" which enables Define-by-Run type of computational graph. We will deal with this again later.
 
@@ -364,7 +417,7 @@ print('Type of torch.Tensor: ', type(cputensor))
 
 ```
 
-**(3) What does torch.autograd.Variable contain?**   
+### (3) What does torch.autograd.Variable contain?   
 
 Because of the aforementioned reasons, PyTorch's Variable contains three different
 entities as below
@@ -388,7 +441,7 @@ print('x.grad:', x.grad)
 print('x.grad:', x.grad_fn)
 ```
 
-**(4) Backpropagation with dynamic graph**  
+### (4) Backpropagation with dynamic graph   
 
 However, if the Variables go through some mathematical operation and we use
 .backward() function to use Autograd feature.  
@@ -420,10 +473,7 @@ Numpy automatically sets the datatype as float64.
 
 However, TensorFlow uses
 float32 as a default. 
-To convert a tf.Tensor from numpy array, use 
-
->
-**tf.convert_to_tensor()**
+To convert a tf.Tensor from numpy array, use **tf.convert_to_tensor()**
 
 function as below.
 
@@ -756,6 +806,7 @@ print('z.grad_fn:', z.grad_fn)
 Here, x is not assigned with grad_fn because we started the operation from x.
 # 03 **Computaion of Data**
 
+# 1. Tensorflow VS PyTorch Comparison 
 There are a few distinct differences between Tensorflow and Pytorch when it
 comes to data compuation.
 
@@ -807,7 +858,7 @@ computational graph.
 (1) Repetitive computation can lead to slower computation speed. 
 (2) Difficult to distribute the work load in the beginning of training.
 
-# 1. Dynamic Graph and Static Graph
+# 2. Dynamic Graph and Static Graph
 
 ## **[TensorFlow]** Graph and session
 
