@@ -67,6 +67,7 @@ The whole content was written in Ipython Notebook then converted into MarkDown. 
 >[[TensorFlow]](https://github.com/tango4j/tensorflow-vs-pytorch#tensorflow)  
 >>[Method 1: tf.get_variable()](https://github.com/tango4j/tensorflow-vs-pytorch#method-1-tfget_variable)  
 >>[Method 2: tf.Variable](https://github.com/tango4j/tensorflow-vs-pytorch#method-2-tfvariable)   
+
 >[[PyTorch] Creating PyTorch Variable - torch.autograd.Variable](https://github.com/tango4j/tensorflow-vs-pytorch#pytorch-creating-pytorch-variable---torchautogradvariable)   
 >>[The concept of Pytorch Variable](https://github.com/tango4j/tensorflow-vs-pytorch#the-concept-of-pytorch-variable)   
 
