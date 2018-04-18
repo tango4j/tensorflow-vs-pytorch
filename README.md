@@ -40,10 +40,10 @@ The whole content was written in Ipython Notebook then converted into MarkDown. 
 >>[Numpy to torch.Tensor](https://github.com/tango4j/tensorflow-vs-pytorch#numpy-to-torchtensor)   
 >>[torch.Tensor to Numpy](https://github.com/tango4j/tensorflow-vs-pytorch#torchtensor-to-numpy)    
 
-[3. Indentifying The Dimension](https://github.com/tango4j/tensorflow-vs-pytorch#3-indentifying-the-dimension)    
->[[TensorFlow] .shape or tf.rank() followed by .eval()](https://github.com/tango4j/tensorflow-vs-pytorch#tensorflow-shape-or-tfrank-followed-by-eval)   
->>[.shape variable in TensorFlow](https://github.com/tango4j/tensorflow-vs-pytorch#shape-variable-in-tensorflow)   
->>[tf.rank function](https://github.com/tango4j/tensorflow-vs-pytorch#tfrank-function)   
+> [3. Indentifying The Dimension](https://github.com/tango4j/tensorflow-vs-pytorch#3-indentifying-the-dimension)    
+> [[TensorFlow] .shape or tf.rank() followed by .eval()](https://github.com/tango4j/tensorflow-vs-pytorch#tensorflow-shape-or-tfrank-followed-by-eval)   
+>> [.shape variable in TensorFlow](https://github.com/tango4j/tensorflow-vs-pytorch#shape-variable-in-tensorflow)   
+>> [tf.rank function](https://github.com/tango4j/tensorflow-vs-pytorch#tfrank-function)   
 
 >[[PyTorch] .shape or .size()](https://github.com/tango4j/tensorflow-vs-pytorch#pytorch-shape-or-size)   
 >>[Automatically Displayed PyTorch Tensor Dimension](https://github.com/tango4j/tensorflow-vs-pytorch#automatically-displayed-pytorch-tensor-dimension)   
@@ -54,7 +54,7 @@ The whole content was written in Ipython Notebook then converted into MarkDown. 
 >>[Reshape tf.Tensor with tf.reshape](https://github.com/tango4j/tensorflow-vs-pytorch#reshape-tftensor-with-tfreshape)   
 >>[Handling the Rest of Dimension with "-1"](https://github.com/tango4j/tensorflow-vs-pytorch#handling-the-rest-of-dimension-with--1-1)
 >[[PyTorch] .view() function](https://github.com/tango4j/tensorflow-vs-pytorch#pytorch-view-function)   
->Reshape PyTorch Tensor with .view()
+> Reshape PyTorch Tensor with .view()
 >> [Handling the Rest of Dimension with "-1"](https://github.com/tango4j/tensorflow-vs-pytorch#handling-the-rest-of-dimension-with--1-1)
 >> [Copy the Dimension of other PyTorch Tensor .view_as()](https://github.com/tango4j/tensorflow-vs-pytorch#copy-the-dimension-of-other-pytorch-tensor-view_as)
 > [4. Shaping the Tensor Variables](https://github.com/tango4j/tensorflow-vs-pytorch#4-shaping-the-tensor-variables)   
