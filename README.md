@@ -50,7 +50,8 @@ The whole content was written in Ipython Notebook then converted into MarkDown. 
 
 >[[TensorFlow] tf.reshape](https://github.com/tango4j/tensorflow-vs-pytorch#tensorflow-tfreshape)   
 >>[Reshape tf.Tensor with tf.reshape](https://github.com/tango4j/tensorflow-vs-pytorch#reshape-tftensor-with-tfreshape)   
->>[Handling the Rest of Dimension with "-1"](https://github.com/tango4j/tensorflow-vs-pytorch#handling-the-rest-of-dimension-with--1-1)
+>>[Handling the Rest of Dimension with "-1"](https://github.com/tango4j/tensorflow-vs-pytorch#handling-the-rest-of-dimension-with--1-1)   
+
 >[[PyTorch].view() function](https://github.com/tango4j/tensorflow-vs-pytorch#pytorch-view-function)   
 >> [Reshape PyTorch Tensor with .view()](https://github.com/tango4j/tensorflow-vs-pytorch#reshape-pytorch-tensor-with-view)   
 >> [Handling the Rest of Dimension with "-1"](https://github.com/tango4j/tensorflow-vs-pytorch#handling-the-rest-of-dimension-with--1-1)   
