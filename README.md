@@ -6,12 +6,12 @@ The whole content was written in Ipython Notebook then converted into MarkDown. 
 
 ### TABLE OF CONTENTS
 
-[**01. Tensor**] (https://github.com/tango4j/tensorflow-vs-pytorch#01-tensor)  
-[TensorFlow - Tensors and special type of tensors] (https://github.com/tango4j/tensorflow-vs-pytorch#tensorflow-tensors-and-special-type-of-tensors)
-[1. The Concept of Tensor] (https://github.com/tango4j/tensorflow-vs-pytorch#01-tensor)  
-[(1) What is TensorFlow "Tensor" ?] (https://github.com/tango4j/tensorflow-vs-pytorch#1-what-is-tensorflow-tensor-)
-[(2) Special type Tensors] (https://github.com/tango4j/tensorflow-vs-pytorch#2-special-type-tensors)
-[(3) Convention for Tensor dimension] (https://github.com/tango4j/tensorflow-vs-pytorch#3-convention-for-tensor-dimension)
+[**01. Tensor**](https://github.com/tango4j/tensorflow-vs-pytorch#01-tensor)  
+[TensorFlow - Tensors and special type of tensors](https://github.com/tango4j/tensorflow-vs-pytorch#tensorflow-tensors-and-special-type-of-tensors)
+[1. The Concept of Tensor](https://github.com/tango4j/tensorflow-vs-pytorch#01-tensor)  
+[(1) What is TensorFlow "Tensor" ?](https://github.com/tango4j/tensorflow-vs-pytorch#1-what-is-tensorflow-tensor-)
+[(2) Special type Tensors](https://github.com/tango4j/tensorflow-vs-pytorch#2-special-type-tensors)
+[(3) Convention for Tensor dimension](https://github.com/tango4j/tensorflow-vs-pytorch#3-convention-for-tensor-dimension)
 [(4) Numpy to tf.Variable] (https://github.com/tango4j/tensorflow-vs-pytorch#4-numpy-to-tfvariable)
 [(5) Direct declaration] (https://github.com/tango4j/tensorflow-vs-pytorch#5-direct-declaration)
 [Difference Between Special Tensors and tf.Variable (TensorFlow)] (https://github.com/tango4j/tensorflow-vs-pytorch#difference-between-special-tensors-and-tfvariable-tensorflow)
