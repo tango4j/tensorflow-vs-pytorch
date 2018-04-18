@@ -60,6 +60,7 @@ The whole content was written in Ipython Notebook then converted into MarkDown. 
 >> [Reshape PyTorch Tensor with .view()](https://github.com/tango4j/tensorflow-vs-pytorch#reshape-pytorch-tensor-with-view)   
 >> [Handling the Rest of Dimension with "-1"](https://github.com/tango4j/tensorflow-vs-pytorch#handling-the-rest-of-dimension-with--1-1)   
 >> [Copy the Dimension of other PyTorch Tensor .view_as()](https://github.com/tango4j/tensorflow-vs-pytorch#copy-the-dimension-of-other-pytorch-tensor-view_as)   
+
 > [5. Shaping the Tensor Variables](https://github.com/tango4j/tensorflow-vs-pytorch#4-shaping-the-tensor-variables)   
 
 > [6. Datatype Conversion](https://github.com/tango4j/tensorflow-vs-pytorch#5-datatype-conversion)    
