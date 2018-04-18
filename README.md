@@ -53,21 +53,23 @@ The whole content was written in Ipython Notebook then converted into MarkDown. 
 >Reshape PyTorch Tensor with .view()
 [Handling the Rest of Dimension with "-1"](https://github.com/tango4j/tensorflow-vs-pytorch#handling-the-rest-of-dimension-with--1-1)
 >> [Copy the Dimension of other PyTorch Tensor .view_as()] (https://github.com/tango4j/tensorflow-vs-pytorch#copy-the-dimension-of-other-pytorch-tensor-view_as)
->> [4. Shaping the Tensor Variables](https://github.com/tango4j/tensorflow-vs-pytorch#4-shaping-the-tensor-variables)  
->> [5. Datatype Conversion] (https://github.com/tango4j/tensorflow-vs-pytorch#5-datatype-conversion)
->> [6. Printing Variables] (https://github.com/tango4j/tensorflow-vs-pytorch#6-printing-variables)
+>> [4. Shaping the Tensor Variables](https://github.com/tango4j/tensorflow-vs-pytorch#4-shaping-the-tensor-variables)   
+>> [5. Datatype Conversion] (https://github.com/tango4j/tensorflow-vs-pytorch#5-datatype-conversion)   
+>> [6. Printing Variables] (https://github.com/tango4j/tensorflow-vs-pytorch#6-printing-variables)   
 
-[**02. Variable**](https://github.com/tango4j/tensorflow-vs-pytorch#02-variables-)
-[1. Creating a Variable](https://github.com/tango4j/tensorflow-vs-pytorch#1-creating-a-variable)
-[[TensorFlow]](https://github.com/tango4j/tensorflow-vs-pytorch#tensorflow)
-[Method 1: tf.get_variable()](https://github.com/tango4j/tensorflow-vs-pytorch#method-1-tfget_variable)
-[Method 2: tf.Variable](https://github.com/tango4j/tensorflow-vs-pytorch#method-2-tfvariable)
-[PyTorch - Creating PyTorch Variable - torch.autograd.Variable](https://github.com/tango4j/tensorflow-vs-pytorch#pytorch-creating-pytorch-variable---torchautogradvariable)
-[The concept of Pytorch Variable](https://github.com/tango4j/tensorflow-vs-pytorch#the-concept-of-pytorch-variable)
 
-[**03. Computation of data**](https://github.com/tango4j/tensorflow-vs-pytorch#03-computaion-of-data)
-[1. Tensorflow VS PyTorch Comparison](https://github.com/tango4j/tensorflow-vs-pytorch#1-tensorflow-vs-pytorch-comparison)
-[2. Dynamic Graph and Static Graph](https://github.com/tango4j/tensorflow-vs-pytorch#1-dynamic-graph-and-static-graph)
+[**02. Variable**](https://github.com/tango4j/tensorflow-vs-pytorch#02-variables-)   
+>[1. Creating a Variable](https://github.com/tango4j/tensorflow-vs-pytorch#1-creating-a-variable)   
+>[[TensorFlow]](https://github.com/tango4j/tensorflow-vs-pytorch#tensorflow)  
+>>[Method 1: tf.get_variable()](https://github.com/tango4j/tensorflow-vs-pytorch#method-1-tfget_variable)  
+>>[Method 2: tf.Variable](https://github.com/tango4j/tensorflow-vs-pytorch#method-2-tfvariable)   
+>[[PyTorch] Creating PyTorch Variable - torch.autograd.Variable](https://github.com/tango4j/tensorflow-vs-pytorch#pytorch-creating-pytorch-variable---torchautogradvariable)   
+>>[The concept of Pytorch Variable](https://github.com/tango4j/tensorflow-vs-pytorch#the-concept-of-pytorch-variable)   
+
+
+[**03. Computation of data**](https://github.com/tango4j/tensorflow-vs-pytorch#03-computaion-of-data)   
+>[1. Tensorflow VS PyTorch Comparison](https://github.com/tango4j/tensorflow-vs-pytorch#1-tensorflow-vs-pytorch-comparison)   
+>[2. Dynamic Graph and Static Graph](https://github.com/tango4j/tensorflow-vs-pytorch#1-dynamic-graph-and-static-graph)   
 
 - There are a few distinct differences between Tensorflow and Pytorch when it comes to data compuation.
 
