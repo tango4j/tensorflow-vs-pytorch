@@ -7,9 +7,7 @@ However, the term "Variable" in each framework is used in different way.
 **TensorFlow**
 
 If you want to declare mutable variable (weight and bias): use **tf.Variable**  
-If you want to declare immutable variable (a constant that will never change): use
-
-**tf.constant**
+If you want to declare immutable variable (a constant that will never change): use **tf.constant**
 
 **PyTorch**
 
@@ -24,10 +22,6 @@ Let's get into details.
 
 ### Basics for TensorFlow Tensors
 
-```python
-import tensorflow as tf
-import numpy as np
-```
 **(1) What is TensorFlow "Tensor" ?**  
 The concept of "tensor" in Tensorflow is very confusing for beginners.
 When it says "tf.Tensor", that means "Class Tensor". In addition, there are some special type of tensors.
@@ -181,9 +175,6 @@ placeholder_tensor = tf.placeholder(tf.float32, shape=(2, 2))
 
 ## **[PyTorch]** Torch tensor and torch.Variable
 
-```python
-import torch
-```
 ### Basics for PyTorch Tensors.
 
 **(1) PyTorch Tensor.**    

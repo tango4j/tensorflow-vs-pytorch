@@ -15,10 +15,6 @@ And
 Variable in TensorFlow is one of the most important concept that you should
 always well aware of to build your own networks.
 
-```python
-import tensorflow as tf
-import numpy as np
-```
 
 ### **Method 1:** tf.get_variable()  
 
@@ -58,10 +54,6 @@ weprint('tf_biases has type of :', type(tf_biases), 'and shape of', tf_biases.sh
 ```
 
 ## **[PyTorch]** Creating PyTorch Variable - torch.autograd.Variable
-
-```python
-import torch
-```
 
 As we learned from the last chapter, Pytorch is based on the concept of
 "Variable".

@@ -1,11 +1,5 @@
 # 03 **Computaion of Data**
 
-```python
-import tensorflow as tf
-import torch
-import numpy as np
-```
-
 There are a few distinct differences between Tensorflow and Pytorch when it
 comes to data compuation.
 
@@ -183,9 +177,6 @@ for the same operation.
 This operation can be also computed with torch.autograd.Variable. With
 torch.autograd.Variable, we can compute gradients!
 
-```python
-from torch.autograd import Variable
-```
 
 ```python
 a1 = Variable(torch.from_numpy(np.asarray([[1,2]])), requires_grad=True)
