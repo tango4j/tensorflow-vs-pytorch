@@ -291,10 +291,7 @@ Numpy automatically sets the datatype as float64.
 
 However, TensorFlow uses
 float32 as a default. 
-To convert a tf.Tensor from numpy array, use 
-
->
-**tf.convert_to_tensor()**
+To convert a tf.Tensor from numpy array, use **tf.convert_to_tensor()**
 
 function as below.
 

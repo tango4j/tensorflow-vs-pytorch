@@ -367,10 +367,7 @@ Numpy automatically sets the datatype as float64.
 
 However, TensorFlow uses
 float32 as a default. 
-To convert a tf.Tensor from numpy array, use 
-
->
-**tf.convert_to_tensor()**
+To convert a tf.Tensor from numpy array, use **tf.convert_to_tensor()**
 
 function as below.
 
@@ -703,6 +700,7 @@ print('z.grad_fn:', z.grad_fn)
 Here, x is not assigned with grad_fn because we started the operation from x.
 # 03 **Computaion of Data**
 
+# 1. Tensorflow VS PyTorch Comparison 
 There are a few distinct differences between Tensorflow and Pytorch when it
 comes to data compuation.
 
@@ -754,7 +752,7 @@ computational graph.
 (1) Repetitive computation can lead to slower computation speed. 
 (2) Difficult to distribute the work load in the beginning of training.
 
-# 1. Dynamic Graph and Static Graph
+# 2. Dynamic Graph and Static Graph
 
 ## **[TensorFlow]** Graph and session
 
