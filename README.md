@@ -53,8 +53,8 @@ The whole content was written in Ipython Notebook then converted into MarkDown. 
 >[[TensorFlow] tf.reshape](https://github.com/tango4j/tensorflow-vs-pytorch#tensorflow-tfreshape)   
 >>[Reshape tf.Tensor with tf.reshape](https://github.com/tango4j/tensorflow-vs-pytorch#reshape-tftensor-with-tfreshape)   
 >>[Handling the Rest of Dimension with "-1"](https://github.com/tango4j/tensorflow-vs-pytorch#handling-the-rest-of-dimension-with--1-1)
->[[PyTorch] .view() function](https://github.com/tango4j/tensorflow-vs-pytorch#pytorch-view-function)   
-> Reshape PyTorch Tensor with .view()
+>[[PyTorch].view() function](https://github.com/tango4j/tensorflow-vs-pytorch#pytorch-view-function)   
+>> [Reshape PyTorch Tensor with .view()](https://github.com/tango4j/tensorflow-vs-pytorch#reshape-pytorch-tensor-with-view)
 >> [Handling the Rest of Dimension with "-1"](https://github.com/tango4j/tensorflow-vs-pytorch#handling-the-rest-of-dimension-with--1-1)
 >> [Copy the Dimension of other PyTorch Tensor .view_as()](https://github.com/tango4j/tensorflow-vs-pytorch#copy-the-dimension-of-other-pytorch-tensor-view_as)
 > [4. Shaping the Tensor Variables](https://github.com/tango4j/tensorflow-vs-pytorch#4-shaping-the-tensor-variables)   
@@ -81,7 +81,7 @@ The whole content was written in Ipython Notebook then converted into MarkDown. 
 |               | TensorFlow      | PyTorch        |
 |---------------|-----------------|----------------|
 | Framework     | Define-and-run  | Define-by-run  |
-| Graph         | Static | Dynamic|
+| Graph         | Static          | Dynamic        |
 | Debug         | Non-native debugger (tfdbg) |pdb(ipdb) Python debugger|
 
 **How "Graph" is defined in each framework?**
