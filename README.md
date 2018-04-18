@@ -4,9 +4,9 @@ This repository aims for comparative analysis of TensorFlow vs PyTorch, for thos
 
 The whole content was written in Ipython Notebook then converted into MarkDown. Ipython Notebooks in main directory cotains the same content.
 
-### TABLE OF CONTENTS
+## TABLE OF CONTENTS
 
-[**01. Tensor**](https://github.com/tango4j/tensorflow-vs-pytorch#01-tensor)  
+[### 01. Tensor](https://github.com/tango4j/tensorflow-vs-pytorch#01-tensor)  
 >[[TensorFlow] - Tensors and special type of tensors](https://github.com/tango4j/tensorflow-vs-pytorch#tensorflow-tensors-and-special-type-of-tensors)   
 
 > [1. The Concept of Tensor](https://github.com/tango4j/tensorflow-vs-pytorch#01-tensor)   
@@ -29,7 +29,7 @@ The whole content was written in Ipython Notebook then converted into MarkDown. 
 >>[(1) PyTorch Tensor.](https://github.com/tango4j/tensorflow-vs-pytorch#1-pytorch-tensor)   
 >>[(2) PyTorch's dynamic graph feature](https://github.com/tango4j/tensorflow-vs-pytorch#2-pytorchs-dynamic-graph-feature)   
 >>[(3) What does torch.autograd.Variable contain?](https://github.com/tango4j/tensorflow-vs-pytorch#3-what-does-torchautogradvariable-contain)   
->>[(4) Backpropagation with dynamic graph] (https://github.com/tango4j/tensorflow-vs-pytorch#4-backpropagation-with-dynamic-graph)   
+>>[(4) Backpropagation with dynamic graph](https://github.com/tango4j/tensorflow-vs-pytorch#4-backpropagation-with-dynamic-graph)   
 
 >[2. Tensor Numpy Conversion](https://github.com/tango4j/tensorflow-vs-pytorch#2-tensor-numpy-conversion)  
 >[[TensorFlow] tf.convert_to_tensor or .eval()] (https://github.com/tango4j/tensorflow-vs-pytorch#tensorflow-tfconvert_to_tensor-or-eval)  
