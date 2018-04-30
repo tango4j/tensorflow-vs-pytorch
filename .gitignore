@@ -1,6 +1,6 @@
 autopush.sh
-example/MNIST_data
-/home/inctrl/Dropbox/personal_prj/tensorflow-vs-pytorch/examples/MNIST_data/t10k-images-idx3-ubyte.gz
-/home/inctrl/Dropbox/personal_prj/tensorflow-vs-pytorch/examples/MNIST_data/t10k-labels-idx1-ubyte.gz
-/home/inctrl/Dropbox/personal_prj/tensorflow-vs-pytorch/examples/MNIST_data/train-images-idx3-ubyte.gz
-/home/inctrl/Dropbox/personal_prj/tensorflow-vs-pytorch/examples/MNIST_data/train-labels-idx1-ubyte.gz
+examples/MNIST_data
+examples/MNIST_data/t10k-images-idx3-ubyte.gz
+examples/MNIST_data/t10k-labels-idx1-ubyte.gz
+examples/MNIST_data/train-images-idx3-ubyte.gz
+examples/MNIST_data/train-labels-idx1-ubyte.gz
