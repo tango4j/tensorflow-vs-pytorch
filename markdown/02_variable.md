@@ -1,8 +1,7 @@
 # 02 Variables
 
 In the last session, we learned about the difference between tf.Variables and
-tf.Tensor. In this chapter, we are going to review in-depth use of tf.Variable
-and torch.autograd.Variable.
+tf.Tensor. In this chapter, we review tf.Variable which is very essential for tensorflow framework. We also review torch.autograd.Variable type which has been deprecated.
 
 
 # 1. Creating a Variable

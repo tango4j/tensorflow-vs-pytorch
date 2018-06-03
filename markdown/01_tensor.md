@@ -12,7 +12,8 @@ If you want to declare immutable variable (a constant that will never change): u
 **PyTorch**
 
 If you want to calculate matrix with torch framework: use **torch.FloatTensor**  
-If you want to use autograd and get gradient value: use **torch.autograd.Variable**
+Pytorch merged **Variable** with **Tensor** in their release v0.4.0.
+(Pytorch versions ealier than v0.4.0, autograd and get gradient value were only availabe with **torch.autograd.Variable**
 
 Let's get into details.
 

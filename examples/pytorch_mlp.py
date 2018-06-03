@@ -89,6 +89,8 @@ for epoch in range(num_epochs):
             labels = torch.from_numpy(oneHot2num(labels))
             images = Variable(images.view(-1, 28*28).cuda())
             labels = Variable(labels.cuda())
+            images = torch.tensor(images.view(-1, 28*28).cuda())
+            labels = torch.tensor(labels.cuda())
             
             # Forward + Backward + Optimize
             optimizer.zero_grad()  # zero the gradient buffer
@@ -102,7 +104,8 @@ for epoch in range(num_epochs):
     for i, (images_test, labels_test) in enumerate(dataLoader(teX, teY, batch_size)):
         images_test = torch.from_numpy(images_test)
         labels_test = torch.from_numpy(oneHot2num(labels_test))
-        images_test = Variable(images_test.view(-1, 28*28), requires_grad=False).cuda()
+        # images_test = Variable(images_test.view(-1, 28*28), requires_grad=False).cuda()
+        images_test = torch.tensor(images_test.view(-1, 28*28), requires_grad=False).cuda()
         outputs_test = model(images_test)
         _, predicted = torch.max(outputs_test.data, 1)
         total += labels_test.size(0)

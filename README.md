@@ -194,7 +194,8 @@ If you want to declare immutable variable (a constant that will never change): u
 **PyTorch**
 
 If you want to calculate matrix with torch framework: use **torch.FloatTensor**  
-If you want to use autograd and get gradient value: use **torch.autograd.Variable**
+Pytorch merged **Variable** with **Tensor** in their release v0.4.0.
+(Pytorch versions ealier than v0.4.0, autograd and get gradient value were only availabe with **torch.autograd.Variable**
 
 Let's get into details.
 
@@ -672,8 +673,7 @@ print('The shape of torch_tensor2:', torch_tensor2.shape)
 # 02 Variables
 
 In the last session, we learned about the difference between tf.Variables and
-tf.Tensor. In this chapter, we are going to review in-depth use of tf.Variable
-and torch.autograd.Variable.
+tf.Tensor. In this chapter, we review tf.Variable which is very essential for tensorflow framework. We also review torch.autograd.Variable type which has been deprecated.
 
 
 # 1. Creating a Variable
