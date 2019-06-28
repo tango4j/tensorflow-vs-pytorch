@@ -2,6 +2,24 @@
 
 This repository aims for comparative analysis of TensorFlow vs PyTorch, for those who want to learn TensorFlow while already familiar with PyTorch or vice versa.
 
+## Important Updates
+
+[ ** TensorFlow ** ]
+Eager Excution (Dynamic graph) (https://www.tensorflow.org/guide/eager)
+>> Tensorflow also launches a dynamic graph framework which enables define by run.
+
+[ ** Pytorch ** ]
+Variable is merged into Tensor(https://pytorch.org/blog/pytorch-0_4_0-migration-guide).
+>> Currently, torch.Variable returns torch.tensor and torch.tensor can function as old torch.Variable.
+
+
+
+
+|               | TensorFlow                                           | PyTorch                                            |
+|---------------|------------------------------------------------------|----------------------------------------------------|
+|    | [Numpy to tf.Tensor](https://github.com/tango4j/tensorflow-vs-pytorch#numpy-to-tftensor)                                      | Define-by-run                                      |
+|| 
+
 ## TABLE OF CONTENTS
 
 [**01. Tensor**](https://github.com/tango4j/tensorflow-vs-pytorch#01-tensor)   
