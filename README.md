@@ -1,10 +1,32 @@
 # tensorflow-vs-pytorch
 
+A comparative study of TensorFlow vs PyTorch.
+
 This repository aims for comparative analysis of TensorFlow vs PyTorch, for those who want to learn TensorFlow while already familiar with PyTorch or vice versa.
 
-The whole content was written in Ipython Notebook then converted into MarkDown. Ipython Notebooks in main directory cotains the same content.
 
-## TABLE OF CONTENTS
+## Important Updates
+
+**TensorFlow**  
+
+[Eager Excution (Oct 17, 2018)](https://www.tensorflow.org/guide/eager)   
+Tensorflow also launches a dynamic graph framework which enables define by run.
+
+**Pytorch**
+
+[Pytorch 4.0 Migraction (Apr 22, 2018)](https://pytorch.org/blog/pytorch-0_4_0-migration-guide).   
+Variable is merged into Tensor. From 4.0, torch.Variable returns torch.tensor and torch.tensor can function as old torch.Variable.
+
+
+## vs. Table
+
+|               | TensorFlow                                           | PyTorch                                            |
+|---------------|------------------------------------------------------|----------------------------------------------------|
+|  Numpy to tensor | [**- Numpy to tf.Tensor**](https://github.com/tango4j/tensorflow-vs-pytorch#numpy-to-tftensor) <br/> ```tf.convert_to_tensor(numpy_array, np.float32)``` | [**- Numpy to torch.Tensor**](https://github.com/tango4j/tensorflow-vs-pytorch#numpy-to-torchtensor) <br/> ```torch.from_numpy(numpy_array)``` |
+| Tensor to Numpy  | [**- tf.Tensor to Numpy**](https://github.com/tango4j/tensorflow-vs-pytorch#tftensor-to-numpy) <br/> ```tensorflow_tensor.eval()```  <br/>  ```tf.convert_to_tensor(numpy_array, np.float32)```  |  [**- torch.Tensor to Numpy**](https://github.com/tango4j/tensorflow-vs-pytorch#torchtensor-to-numpy) <br/> ```torch_for_numpy.numpy()``` |
+| Dimension check | [**- .shape variable**](https://github.com/tango4j/tensorflow-vs-pytorch#shape-variable-in-tensorflow) <br/>  [**- tf.rank function**](https://github.com/tango4j/tensorflow-vs-pytorch#tfrank-function) <br/> ```my_image.shape```  <br/>  ```tf.rank(my_image)``` | [**- Automatically Displayed Dim.**](https://github.com/tango4j/tensorflow-vs-pytorch#automatically-displayed-pytorch-tensor-dimension)  <br/>  [**- .shape variable in PyTorch**](https://github.com/tango4j/tensorflow-vs-pytorch#shape-variable-in-pytorch) <br/> ```torch_for_numpy.shape ```  | 
+
+## Table of Contents
 
 [**01. Tensor**](https://github.com/tango4j/tensorflow-vs-pytorch#01-tensor)   
 
@@ -24,13 +46,13 @@ The whole content was written in Ipython Notebook then converted into MarkDown. 
 >>[(1) PyTorch Tensor](https://github.com/tango4j/tensorflow-vs-pytorch#1-pytorch-tensor)   
 >>[(2) PyTorch's dynamic graph feature](https://github.com/tango4j/tensorflow-vs-pytorch#2-pytorchs-dynamic-graph-feature)   
 >>[(3) What does torch.autograd.Variable contain?](https://github.com/tango4j/tensorflow-vs-pytorch#3-what-does-torchautogradvariable-contain)   
->>[(4) Backpropagation with dynamic graph](https://github.com/tango4j/tensorflow-vs-pytorch#4-backpropagation-with-dynamic-graph)   
+>>[(4) Backpropagation with dynamic graph](https:f//github.com/tango4j/tensorflow-vs-pytorch#4-backpropagation-with-dynamic-graph)   
 
 >[**2. Tensor Numpy Conversion**](https://github.com/tango4j/tensorflow-vs-pytorch#2-tensor-numpy-conversion)   
 
 >[[TensorFlow] tf.convert_to_tensor or .eval()](https://github.com/tango4j/tensorflow-vs-pytorch#tensorflow-tfconvert_to_tensor-or-eval)  
->>[Numpy to tf.Tensor](https://github.com/tango4j/tensorflow-vs-pytorch#numpy-to-tftensor)   
->>[tf.Tensor to Numpy](https://github.com/tango4j/tensorflow-vs-pytorch#tftensor-to-numpy)   
+>> [Numpy to tf.Tensor](https://github.com/tango4j/tensorflow-vs-pytorch#numpy-to-tftensor)   
+>> [tf.Tensor to Numpy](https://github.com/tango4j/tensorflow-vs-pytorch#tftensor-to-numpy) |
 
 >[[PyTorch] .numpy() or torch.from_numpy()](https://github.com/tango4j/tensorflow-vs-pytorch#pytorch-numpy-or-torchfrom_numpy)   
 >>[Numpy to torch.Tensor](https://github.com/tango4j/tensorflow-vs-pytorch#numpy-to-torchtensor)   
@@ -58,7 +80,9 @@ The whole content was written in Ipython Notebook then converted into MarkDown. 
 >> [Copy the Dimension of other PyTorch Tensor .view_as()](https://github.com/tango4j/tensorflow-vs-pytorch#copy-the-dimension-of-other-pytorch-tensor-view_as)   
 
 > [**5. Shaping the Tensor Variables**](https://github.com/tango4j/tensorflow-vs-pytorch#4-shaping-the-tensor-variables)   
+
 > [**6. Datatype Conversion**](https://github.com/tango4j/tensorflow-vs-pytorch#5-datatype-conversion)    
+
 > [**7. Printing Variables**](https://github.com/tango4j/tensorflow-vs-pytorch#6-printing-variables)   
 
 [**02. Variable**](https://github.com/tango4j/tensorflow-vs-pytorch#02-variables-)   
@@ -81,52 +105,6 @@ The whole content was written in Ipython Notebook then converted into MarkDown. 
 | Framework     | Define-and-run  | Define-by-run  |
 | Graph         | Static          | Dynamic        |
 | Debug         | Non-native debugger (tfdbg) |pdb(ipdb) Python debugger|
-
-**How "Graph" is defined in each framework?**
-
-#**TensorFlow:** 
-
-- Static graph.
-
-- Once define a computational graph and excute the same graph repeatedly.
-
-- Pros: 
-
-    (1) Optimizes the graph upfront and makes better distributed computation.
-    (2) Repeated computation does not cause additional computational cost.
-
-
-- Cons: 
-
-    (1) Difficult to perform different computation for each data point.
-    (2) The structure becomes more complicated and harder to debug than dynamic graph. 
-
-
-#**PyTorch:** 
-
-- Dynamic graph.
-
-- Does not define a graph in advance. Every forward pass makes a new computational graph.
-
-- Pros: 
-
-    (1) Debugging is easier than static graph.  
-    (2) Keep the whole structure concise and intuitive. 
-    (3) For each data point and time different computation can be performed.
-    
-    
-- Cons: 
-
-    (1) Repetitive computation can lead to slower computation speed. 
-    (2) Difficult to distribute the work load in the beginning of training.
-
-- There are a few distinct differences between Tensorflow and Pytorch when it comes to data compuation.
-
-|               | TensorFlow                        | PyTorch        |
-|---------------|---------------------------------- |----------------|
-| Framework     | Define-and-run                    | Define-by-run  |
-| Graph         | Static | Dynamic                  |
-| Debug         | Non-native debugger (tfdbg)       |pdb(ipdb) Python debugger|
 
 **How "Graph" is defined in each framework?**
 
@@ -171,6 +149,8 @@ The whole content was written in Ipython Notebook then converted into MarkDown. 
     
     (2) Difficult to distribute the work load in the beginning of training.
 
+
+- There are a few distinct differences between Tensorflow and Pytorch when it comes to data compuation.
 
 # **01 Tensor**
 
@@ -307,18 +287,12 @@ Let's find out.
 ### Difference Between Special Tensors and tf.Variable (TensorFlow)  
 ### (1) tf.Variable:   
 
-- tf.Variable is **NOT** actually tensor, but rather it
-should be classified as **Variable** to avoid confusion.
-- tf.Variable is the
-only type that can be modified.
-- tf.Variable is designed for weights and bias(≠
-tf.placeholder). Not for feeding data.
-- tf.Variable is stored separately, and
-may live on a parameter server, **not in the graph**. 
-- tf.Variable should
-always be initialized before run.
-- Usually declared by [initial value],
-[dtype], [name]. (There are more arguments...)
+- tf.Variable is the only type that can be modified.
+- tf.Variable is designed for weights and bias(≠ tf.placeholder). Not for feeding data.
+- tf.Variable is **NOT** actually tensor, but rather it should be classified as **Variable** to avoid confusion.
+- tf.Variable is stored separately, and may live on a parameter server, **not in the graph**. 
+- tf.Variable should always be initialized before run.
+- Usually declared by [initial value], [dtype], [name]. (There are more arguments...)
 
 ```python
 mymat = tf.Variable([[7],[11]], tf.int16, name='cat') 
