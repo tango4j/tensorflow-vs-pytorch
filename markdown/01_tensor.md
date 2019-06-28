@@ -133,18 +133,12 @@ Let's find out.
 ### Difference Between Special Tensors and tf.Variable (TensorFlow)  
 ### (1) tf.Variable:   
 
-- tf.Variable is **NOT** actually tensor, but rather it
-should be classified as **Variable** to avoid confusion.
-- tf.Variable is the
-only type that can be modified.
-- tf.Variable is designed for weights and bias(≠
-tf.placeholder). Not for feeding data.
-- tf.Variable is stored separately, and
-may live on a parameter server, **not in the graph**. 
-- tf.Variable should
-always be initialized before run.
-- Usually declared by [initial value],
-[dtype], [name]. (There are more arguments...)
+- tf.Variable is the only type that can be modified.
+- tf.Variable is designed for weights and bias(≠ tf.placeholder). Not for feeding data.
+- tf.Variable is **NOT** actually tensor, but rather it should be classified as **Variable** to avoid confusion.
+- tf.Variable is stored separately, and may live on a parameter server, **not in the graph**. 
+- tf.Variable should always be initialized before run.
+- Usually declared by [initial value], [dtype], [name]. (There are more arguments...)
 
 ```python
 mymat = tf.Variable([[7],[11]], tf.int16, name='cat') 
