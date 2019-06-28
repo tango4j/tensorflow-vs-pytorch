@@ -22,8 +22,8 @@ Currently, torch.Variable returns torch.tensor and torch.tensor can function as 
 
 |               | TensorFlow                                           | PyTorch                                            |
 |---------------|------------------------------------------------------|----------------------------------------------------|
-|               | [Numpy to tf.Tensor](https://github.com/tango4j/tensorflow-vs-pytorch#numpy-to-tftensor)                                      | [Numpy to torch.Tensor](https://github.com/tango4j/tensorflow-vs-pytorch#numpy-to-torchtensor)  |
-|| 
+|  Numpy to tensor | [Numpy to tf.Tensor](https://github.com/tango4j/tensorflow-vs-pytorch#numpy-to-tftensor)                                      | [Numpy to torch.Tensor](https://github.com/tango4j/tensorflow-vs-pytorch#numpy-to-torchtensor)  |
+| Tensor to Numpy  | [tf.Tensor to Numpy](https://github.com/tango4j/tensorflow-vs-pytorch#tftensor-to-numpy) | [torch.Tensor to Numpy](https://github.com/tango4j/tensorflow-vs-pytorch#torchtensor-to-numpy) |
 
 ## TABLE OF CONTENTS
 
