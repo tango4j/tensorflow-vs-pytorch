@@ -58,9 +58,7 @@ The whole content was written in Ipython Notebook then converted into MarkDown. 
 >> [Copy the Dimension of other PyTorch Tensor .view_as()](https://github.com/tango4j/tensorflow-vs-pytorch#copy-the-dimension-of-other-pytorch-tensor-view_as)   
 
 > [**5. Shaping the Tensor Variables**](https://github.com/tango4j/tensorflow-vs-pytorch#4-shaping-the-tensor-variables)   
-
 > [**6. Datatype Conversion**](https://github.com/tango4j/tensorflow-vs-pytorch#5-datatype-conversion)    
-
 > [**7. Printing Variables**](https://github.com/tango4j/tensorflow-vs-pytorch#6-printing-variables)   
 
 [**02. Variable**](https://github.com/tango4j/tensorflow-vs-pytorch#02-variables-)   
@@ -95,14 +93,12 @@ The whole content was written in Ipython Notebook then converted into MarkDown. 
 - Pros: 
 
     (1) Optimizes the graph upfront and makes better distributed computation.
-    
     (2) Repeated computation does not cause additional computational cost.
 
 
 - Cons: 
 
     (1) Difficult to perform different computation for each data point.
-    
     (2) The structure becomes more complicated and harder to debug than dynamic graph. 
 
 
@@ -114,27 +110,23 @@ The whole content was written in Ipython Notebook then converted into MarkDown. 
 
 - Pros: 
 
-    (1) Debugging is easier than static graph.
-    
+    (1) Debugging is easier than static graph.  
     (2) Keep the whole structure concise and intuitive. 
-    
     (3) For each data point and time different computation can be performed.
     
     
 - Cons: 
 
     (1) Repetitive computation can lead to slower computation speed. 
-    
     (2) Difficult to distribute the work load in the beginning of training.
-
 
 - There are a few distinct differences between Tensorflow and Pytorch when it comes to data compuation.
 
-|               | TensorFlow      | PyTorch        |
-|---------------|-----------------|----------------|
-| Framework     | Define-and-run  | Define-by-run  |
-| Graph         | Static | Dynamic|
-| Debug         | Non-native debugger (tfdbg) |pdb(ipdb) Python debugger|
+|               | TensorFlow                        | PyTorch        |
+|---------------|---------------------------------- |----------------|
+| Framework     | Define-and-run                    | Define-by-run  |
+| Graph         | Static | Dynamic                  |
+| Debug         | Non-native debugger (tfdbg)       |pdb(ipdb) Python debugger|
 
 **How "Graph" is defined in each framework?**
 
