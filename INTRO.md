@@ -22,8 +22,9 @@ Currently, torch.Variable returns torch.tensor and torch.tensor can function as 
 
 |               | TensorFlow                                           | PyTorch                                            |
 |---------------|------------------------------------------------------|----------------------------------------------------|
-|  Numpy to tensor | [**Numpy to tf.Tensor**](https://github.com/tango4j/tensorflow-vs-pytorch#numpy-to-tftensor) <br/> tf.convert_to_tensor(numpy_array, np.float32)  | [**Numpy to torch.Tensor**](https://github.com/tango4j/tensorflow-vs-pytorch#numpy-to-torchtensor) <br/> torch.from_numpy(numpy_array) |
-| Tensor to Numpy  | [**tf.Tensor to Numpy**](https://github.com/tango4j/tensorflow-vs-pytorch#tftensor-to-numpy) <br/> tensorflow_tensor.eval()  <br/>  tf.convert_to_tensor(numpy_array, np.float32)  |  [**torch.Tensor to Numpy**](https://github.com/tango4j/tensorflow-vs-pytorch#torchtensor-to-numpy) <br/> torch_for_numpy.numpy() |
+|  Numpy to tensor | [**Numpy to tf.Tensor**](https://github.com/tango4j/tensorflow-vs-pytorch#numpy-to-tftensor) <br/> ```tf.convert_to_tensor(numpy_array, np.float32)``` | [**Numpy to torch.Tensor**](https://github.com/tango4j/tensorflow-vs-pytorch#numpy-to-torchtensor) <br/> ```torch.from_numpy(numpy_array)``` |
+| Tensor to Numpy  | [**tf.Tensor to Numpy**](https://github.com/tango4j/tensorflow-vs-pytorch#tftensor-to-numpy) <br/> ```tensorflow_tensor.eval()```  <br/>  ```tf.convert_to_tensor(numpy_array, np.float32)```  |  [**torch.Tensor to Numpy**](https://github.com/tango4j/tensorflow-vs-pytorch#torchtensor-to-numpy) <br/> ```torch_for_numpy.numpy()``` |
+| Dimension check | [.shape variable](https://github.com/tango4j/tensorflow-vs-pytorch#shape-variable-in-tensorflow) <br/>  [tf.rank function](https://github.com/tango4j/tensorflow-vs-pytorch#tfrank-function) <br/> ```my_image.shape```  <br/>  ```tf.rank(my_image)``` | [Automatically Displayed PyTorch Tensor Dimension](https://github.com/tango4j/tensorflow-vs-pytorch#automatically-displayed-pytorch-tensor-dimension)  <br/>   [.shape variable in PyTorch](https://github.com/tango4j/tensorflow-vs-pytorch#shape-variable-in-pytorch) <br/> ```torch_for_numpy.shape ```  | 
 
 ## Table of Contents
 
@@ -45,7 +46,7 @@ Currently, torch.Variable returns torch.tensor and torch.tensor can function as 
 >>[(1) PyTorch Tensor](https://github.com/tango4j/tensorflow-vs-pytorch#1-pytorch-tensor)   
 >>[(2) PyTorch's dynamic graph feature](https://github.com/tango4j/tensorflow-vs-pytorch#2-pytorchs-dynamic-graph-feature)   
 >>[(3) What does torch.autograd.Variable contain?](https://github.com/tango4j/tensorflow-vs-pytorch#3-what-does-torchautogradvariable-contain)   
->>[(4) Backpropagation with dynamic graph](https://github.com/tango4j/tensorflow-vs-pytorch#4-backpropagation-with-dynamic-graph)   
+>>[(4) Backpropagation with dynamic graph](https:f//github.com/tango4j/tensorflow-vs-pytorch#4-backpropagation-with-dynamic-graph)   
 
 >[**2. Tensor Numpy Conversion**](https://github.com/tango4j/tensorflow-vs-pytorch#2-tensor-numpy-conversion)   
 
