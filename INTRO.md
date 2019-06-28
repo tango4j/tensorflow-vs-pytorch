@@ -27,9 +27,10 @@ This repository aims for comparative analysis of TensorFlow vs PyTorch, for thos
 >[**2. Tensor Numpy Conversion**](https://github.com/tango4j/tensorflow-vs-pytorch#2-tensor-numpy-conversion)   
 
 >[[TensorFlow] tf.convert_to_tensor or .eval()](https://github.com/tango4j/tensorflow-vs-pytorch#tensorflow-tfconvert_to_tensor-or-eval)  
+
 |               | TensorFlow      | PyTorch        |
 |---------------|-----------------|----------------|
-| Framework     | [Numpy to tf.Tensor](https://github.com/tango4j/tensorflow-vs-pytorch#numpy-to-tftensor)   |[tf.Tensor to Numpy](https://github.com/tango4j/tensorflow-vs-pytorch#tftensor-to-numpy) |
+| Framework     | [Numpy to tf.Tensor](https://github.com/tango4j/tensorflow-vs-pytorch#numpy-to-tftensor)   |  [tf.Tensor to Numpy](https://github.com/tango4j/tensorflow-vs-pytorch#tftensor-to-numpy) |
 
 
 >[[PyTorch] .numpy() or torch.from_numpy()](https://github.com/tango4j/tensorflow-vs-pytorch#pytorch-numpy-or-torchfrom_numpy)   
