@@ -9,8 +9,8 @@ This repository aims for comparative analysis of TensorFlow vs PyTorch, for thos
 
 **TensorFlow**  
 
-[Eager Excution(Oct 17, 2018)](https://www.tensorflow.org/guide/eager) (Dynamic graph)
- Tensorflow also launches a dynamic graph framework which enables define by run.
+[Eager Excution(Oct 17, 2018)](https://www.tensorflow.org/guide/eager)   
+Tensorflow also launches a dynamic graph framework which enables define by run.
 
 **Pytorch**
 
