@@ -14,8 +14,8 @@ Tensorflow also launches a dynamic graph framework which enables define by run.
 
 **Pytorch**
 
-[Pytorch 4.0 Migraction (Apr 22, 2018)](https://pytorch.org/blog/pytorch-0_4_0-migration-guide). 
-Variable is merged into Tensor. torch.Variable returns torch.tensor and torch.tensor can function as old torch.Variable.
+[Pytorch 4.0 Migraction (Apr 22, 2018)](https://pytorch.org/blog/pytorch-0_4_0-migration-guide).   
+Variable is merged into Tensor. From 4.0, torch.Variable returns torch.tensor and torch.tensor can function as old torch.Variable.
 
 
 ## vs. Table
